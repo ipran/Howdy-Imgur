@@ -99,13 +99,8 @@
 		3D11FE25232B7A63003F2414 /* Howdy Imgur */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE26232B7A63003F2414 /* AppDelegate.swift */,
-				3D11FE28232B7A63003F2414 /* ViewController.swift */,
-				3D11FE2A232B7A63003F2414 /* Main.storyboard */,
-				3D11FE30232B7A64003F2414 /* Assets.xcassets */,
-				3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */,
-				3D11FE35232B7A64003F2414 /* Info.plist */,
-				3D11FE2D232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld */,
+				3D11FE57232B9005003F2414 /* Source */,
+				3D11FE58232B901E003F2414 /* Resource */,
 			);
 			path = "Howdy Imgur";
 			sourceTree = "<group>";
@@ -126,6 +121,75 @@
 				3D11FE4B232B7A64003F2414 /* Info.plist */,
 			);
 			path = "Howdy ImgurUITests";
+			sourceTree = "<group>";
+		};
+		3D11FE57232B9005003F2414 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE5F232B91CD003F2414 /* Backend */,
+				3D11FE5D232B90F3003F2414 /* Search */,
+				3D11FE5C232B9098003F2414 /* AppDelegate */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		3D11FE58232B901E003F2414 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE35232B7A64003F2414 /* Info.plist */,
+				3D11FE5B232B9073003F2414 /* Coredata */,
+				3D11FE5A232B9046003F2414 /* Storyboard */,
+				3D11FE59232B903D003F2414 /* Assets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		3D11FE59232B903D003F2414 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE30232B7A64003F2414 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3D11FE5A232B9046003F2414 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */,
+				3D11FE2A232B7A63003F2414 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		3D11FE5B232B9073003F2414 /* Coredata */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE2D232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld */,
+			);
+			path = Coredata;
+			sourceTree = "<group>";
+		};
+		3D11FE5C232B9098003F2414 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE26232B7A63003F2414 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3D11FE5D232B90F3003F2414 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE28232B7A63003F2414 /* ViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		3D11FE5F232B91CD003F2414 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VKLBUZ9CT;
-				INFOPLIST_FILE = "Howdy Imgur/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Howdy Imgur/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +520,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4VKLBUZ9CT;
-				INFOPLIST_FILE = "Howdy Imgur/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Howdy Imgur/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

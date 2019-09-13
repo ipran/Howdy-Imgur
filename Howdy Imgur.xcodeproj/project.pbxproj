@@ -20,6 +20,7 @@
 		3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE67232B9D67003F2414 /* URLRequest.swift */; };
 		3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */; };
 		3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6E232BBB40003F2414 /* APIResponse.swift */; };
+		3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3D11FE67232B9D67003F2414 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurConstants.swift; sourceTree = "<group>"; };
 		3D11FE6E232BBB40003F2414 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		3D11FE5F232B91CD003F2414 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				3D11FE70232BBC1B003F2414 /* Manager */,
 				3D11FE60232B9ADD003F2414 /* Common */,
 			);
 			path = Backend;
@@ -237,6 +240,14 @@
 				3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		3D11FE70232BBC1B003F2414 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +388,7 @@
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
+				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

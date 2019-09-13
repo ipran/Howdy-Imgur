@@ -8,9 +8,18 @@
 
 import Foundation
 
+// Log Details
+let logActivity = true
+
 struct ImgurURLConstants {
     static let baseURL = "https://api.imgur.com/3"
     static let gallerySearchPath = "/search/top/week/1"
     static let queryParamSerachKeyName = "k"
+    
+}
+
+struct HTTPHeaderField {
+    static let authorizationHeaderFieldKey = "Authorization"
+    static let authorizationHeaderFieldValue = "Client-ID 078930952d507dc"
     
 }

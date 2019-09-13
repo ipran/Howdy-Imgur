@@ -19,6 +19,7 @@
 		3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE63232B9C66003F2414 /* HTTPMethod.swift */; };
 		3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE67232B9D67003F2414 /* URLRequest.swift */; };
 		3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */; };
+		3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6E232BBB40003F2414 /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		3D11FE63232B9C66003F2414 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3D11FE67232B9D67003F2414 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
 		3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurConstants.swift; sourceTree = "<group>"; };
+		3D11FE6E232BBB40003F2414 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				3D11FE61232B9B9A003F2414 /* Endpoint.swift */,
 				3D11FE63232B9C66003F2414 /* HTTPMethod.swift */,
+				3D11FE6E232BBB40003F2414 /* APIResponse.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
+				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
 			);

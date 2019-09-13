@@ -25,6 +25,9 @@
 		3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* Gallery.swift */; };
 		3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE79232BE5C2003F2414 /* Image.swift */; };
 		3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tag.swift */; };
+		3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE82232C108A003F2414 /* HomeViewController.swift */; };
+		3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE86232C1962003F2414 /* ShadowView.swift */; };
+		3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE88232C1ACE003F2414 /* UITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		3D11FE77232BCDD5003F2414 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		3D11FE79232BE5C2003F2414 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3D11FE7B232BE6B1003F2414 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3D11FE82232C108A003F2414 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D11FE86232C1962003F2414 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		3D11FE88232C1ACE003F2414 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				3D11FE5C232B9098003F2414 /* AppDelegate */,
-				3D11FE5D232B90F3003F2414 /* Search */,
+				3D11FE5D232B90F3003F2414 /* Home */,
 				3D11FE5F232B91CD003F2414 /* Backend */,
 				3D11FE65232B9CA8003F2414 /* Common */,
 			);
@@ -198,13 +204,18 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		3D11FE5D232B90F3003F2414 /* Search */ = {
+		3D11FE5D232B90F3003F2414 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3D11FE81232C0750003F2414 /* Router */,
+				3D11FE80232C0746003F2414 /* Presenter */,
+				3D11FE7F232C072F003F2414 /* Interactor */,
+				3D11FE7E232C0715003F2414 /* Protocols */,
+				3D11FE7D232C0707003F2414 /* View */,
 				3D11FE76232BCDBB003F2414 /* ViewController */,
 				3D11FE75232BCD82003F2414 /* Entity */,
 			);
-			path = Search;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3D11FE5F232B91CD003F2414 /* Backend */ = {
@@ -229,6 +240,8 @@
 		3D11FE65232B9CA8003F2414 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3D11FE85232C18E7003F2414 /* Utils */,
+				3D11FE84232C18E0003F2414 /* View */,
 				3D11FE69232BA11F003F2414 /* Constants */,
 				3D11FE66232B9D42003F2414 /* Extension */,
 			);
@@ -239,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				3D11FE67232B9D67003F2414 /* URLRequest.swift */,
+				3D11FE88232C1ACE003F2414 /* UITextField.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,8 +288,59 @@
 			isa = PBXGroup;
 			children = (
 				3D11FE28232B7A63003F2414 /* ViewController.swift */,
+				3D11FE82232C108A003F2414 /* HomeViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3D11FE7D232C0707003F2414 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D11FE7E232C0715003F2414 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3D11FE7F232C072F003F2414 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3D11FE80232C0746003F2414 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3D11FE81232C0750003F2414 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3D11FE84232C18E0003F2414 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE86232C1962003F2414 /* ShadowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D11FE85232C18E7003F2414 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,11 +477,14 @@
 				3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */,
 				3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */,
 				3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */,
+				3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
+				3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
 				3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */,
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
+				3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
 				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,

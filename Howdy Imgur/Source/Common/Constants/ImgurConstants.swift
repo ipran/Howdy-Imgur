@@ -12,9 +12,9 @@ import Foundation
 let logActivity = true
 
 struct ImgurURLConstants {
-    static let baseURL = "https://api.imgur.com/3"
-    static let gallerySearchPath = "/search/top/week/1"
-    static let queryParamSerachKeyName = "k"
+    static let baseURL = "https://api.imgur.com"
+    static let gallerySearchPath = "/3/gallery/search/top/week/1"
+    static let queryParamSerachKeyName = "q"
     
 }
 

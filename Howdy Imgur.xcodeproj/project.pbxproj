@@ -21,6 +21,10 @@
 		3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */; };
 		3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6E232BBB40003F2414 /* APIResponse.swift */; };
 		3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */; };
+		3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */; };
+		3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* Gallery.swift */; };
+		3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE79232BE5C2003F2414 /* Image.swift */; };
+		3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		3D11FE6A232BA1A4003F2414 /* ImgurConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurConstants.swift; sourceTree = "<group>"; };
 		3D11FE6E232BBB40003F2414 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIManager.swift; sourceTree = "<group>"; };
+		3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPIManager.swift; sourceTree = "<group>"; };
+		3D11FE77232BCDD5003F2414 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		3D11FE79232BE5C2003F2414 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		3D11FE7B232BE6B1003F2414 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +201,8 @@
 		3D11FE5D232B90F3003F2414 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE28232B7A63003F2414 /* ViewController.swift */,
+				3D11FE76232BCDBB003F2414 /* ViewController */,
+				3D11FE75232BCD82003F2414 /* Entity */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -246,8 +255,27 @@
 			isa = PBXGroup;
 			children = (
 				3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */,
+				3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		3D11FE75232BCD82003F2414 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE77232BCDD5003F2414 /* Gallery.swift */,
+				3D11FE79232BE5C2003F2414 /* Image.swift */,
+				3D11FE7B232BE6B1003F2414 /* Tag.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3D11FE76232BCDBB003F2414 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE28232B7A63003F2414 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,14 +410,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */,
+				3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */,
+				3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
+				3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */,
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
 				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
+				3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

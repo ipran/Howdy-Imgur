@@ -53,7 +53,7 @@ extension ImgurFeed: Endpoint {
         
     }
     var method: HTTPMethod {
-        return .post
+        return .get
         
     }
     var queryItems: [URLQueryItem] {

@@ -29,6 +29,7 @@
 		3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE86232C1962003F2414 /* ShadowView.swift */; };
 		3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE88232C1ACE003F2414 /* UITextField.swift */; };
 		3D11FE8C232C21EE003F2414 /* lato in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE8B232C21EE003F2414 /* lato */; };
+		3D11FE8E232CB54B003F2414 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE8D232CB54B003F2414 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		3D11FE86232C1962003F2414 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		3D11FE88232C1ACE003F2414 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		3D11FE8B232C21EE003F2414 /* lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lato; sourceTree = "<group>"; };
+		3D11FE8D232CB54B003F2414 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			children = (
 				3D11FE67232B9D67003F2414 /* URLRequest.swift */,
 				3D11FE88232C1ACE003F2414 /* UITextField.swift */,
+				3D11FE8D232CB54B003F2414 /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
+				3D11FE8E232CB54B003F2414 /* UIView.swift in Sources */,
 				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
 				3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */,

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE26232B7A63003F2414 /* AppDelegate.swift */; };
 		3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE28232B7A63003F2414 /* ViewController.swift */; };
-		3D11FE2C232B7A63003F2414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE2A232B7A63003F2414 /* Main.storyboard */; };
+		3D11FE2C232B7A63003F2414 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE2A232B7A63003F2414 /* Home.storyboard */; };
 		3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE2D232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld */; };
 		3D11FE31232B7A64003F2414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE30232B7A64003F2414 /* Assets.xcassets */; };
 		3D11FE34232B7A64003F2414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */; };
@@ -30,6 +30,8 @@
 		3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE88232C1ACE003F2414 /* UITextField.swift */; };
 		3D11FE8C232C21EE003F2414 /* lato in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE8B232C21EE003F2414 /* lato */; };
 		3D11FE8E232CB54B003F2414 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE8D232CB54B003F2414 /* UIView.swift */; };
+		3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */; };
+		3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE91232CC520003F2414 /* UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,7 @@
 		3D11FE23232B7A63003F2414 /* Howdy Imgur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Howdy Imgur.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11FE26232B7A63003F2414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D11FE28232B7A63003F2414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3D11FE2B232B7A63003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D11FE2B232B7A63003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		3D11FE2E232B7A63003F2414 /* Howdy_Imgur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Howdy_Imgur.xcdatamodel; sourceTree = "<group>"; };
 		3D11FE30232B7A64003F2414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D11FE33232B7A64003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,8 @@
 		3D11FE88232C1ACE003F2414 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		3D11FE8B232C21EE003F2414 /* lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lato; sourceTree = "<group>"; };
 		3D11FE8D232CB54B003F2414 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		3D11FE91232CC520003F2414 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */,
-				3D11FE2A232B7A63003F2414 /* Main.storyboard */,
+				3D11FE2A232B7A63003F2414 /* Home.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -259,6 +263,8 @@
 				3D11FE67232B9D67003F2414 /* URLRequest.swift */,
 				3D11FE88232C1ACE003F2414 /* UITextField.swift */,
 				3D11FE8D232CB54B003F2414 /* UIView.swift */,
+				3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */,
+				3D11FE91232CC520003F2414 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -464,7 +470,7 @@
 				3D11FE8C232C21EE003F2414 /* lato in Resources */,
 				3D11FE34232B7A64003F2414 /* LaunchScreen.storyboard in Resources */,
 				3D11FE31232B7A64003F2414 /* Assets.xcassets in Resources */,
-				3D11FE2C232B7A63003F2414 /* Main.storyboard in Resources */,
+				3D11FE2C232B7A63003F2414 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,9 +498,11 @@
 				3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */,
 				3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */,
 				3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */,
+				3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */,
 				3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
+				3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */,
 				3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
 				3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */,
@@ -541,12 +549,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D11FE2A232B7A63003F2414 /* Main.storyboard */ = {
+		3D11FE2A232B7A63003F2414 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D11FE2B232B7A63003F2414 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */ = {

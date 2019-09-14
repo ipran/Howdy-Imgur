@@ -8,8 +8,11 @@
 
 import Foundation
 
-// Log Details
-let logActivity = true
+// Hold storyboard name constants
+struct ImgurStoryboard {
+    static let home = "Home"
+    
+}
 
 struct ImgurURLConstants {
     static let baseURL = "https://api.imgur.com"
@@ -23,3 +26,6 @@ struct HTTPHeaderField {
     static let authorizationHeaderFieldValue = "Client-ID 078930952d507dc"
     
 }
+
+// Show/Hide log details
+let logActivity = true

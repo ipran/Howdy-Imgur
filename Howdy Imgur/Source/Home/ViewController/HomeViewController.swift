@@ -14,6 +14,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    /**
+     Instantiate a controller
+    */
+    static func instantiateViewController() -> HomeViewController {
+        return UIStoryboard.home().instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

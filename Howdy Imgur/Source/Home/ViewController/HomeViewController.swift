@@ -12,12 +12,11 @@ class HomeViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var segmentControlContainer: ShadowView!
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
-    @IBOutlet weak var showAllListLabel: UILabel!
-    @IBOutlet weak var showLessListLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         segmentControlContainer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         // Set color of segment

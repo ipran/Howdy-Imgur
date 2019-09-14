@@ -199,17 +199,48 @@
                                     <constraint firstItem="iQQ-FT-qoL" firstAttribute="leading" secondItem="SNx-59-GVj" secondAttribute="leading" id="oor-oa-JOc"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-kW-wZm" userLabel="Bottom View Container">
+                                <rect key="frame" x="0.0" y="212" width="414" height="684"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="uNh-hA-xEP">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="400"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uNh-hA-xEP" id="xc7-3K-RGN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="399.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7jM-Xb-2tu" firstAttribute="top" secondItem="GKO-kW-wZm" secondAttribute="top" id="4DQ-XJ-ybc"/>
+                                    <constraint firstItem="7jM-Xb-2tu" firstAttribute="leading" secondItem="GKO-kW-wZm" secondAttribute="leading" id="SGz-xQ-wVS"/>
+                                    <constraint firstAttribute="trailing" secondItem="7jM-Xb-2tu" secondAttribute="trailing" id="Ytl-ut-bFh"/>
+                                    <constraint firstAttribute="bottom" secondItem="7jM-Xb-2tu" secondAttribute="bottom" id="nTE-VI-EJf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="Imgur_BackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GKO-kW-wZm" secondAttribute="bottom" id="Fbo-x8-XiR"/>
+                            <constraint firstItem="GKO-kW-wZm" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="bottom" id="Txd-eS-Wg5"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gCC-Ap-RA3"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="irG-XI-xBf"/>
+                            <constraint firstItem="GKO-kW-wZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mK3-Wd-gJl"/>
+                            <constraint firstItem="GKO-kW-wZm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r2O-r0-dRh"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rVH-EU-ijt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="segmentControlContainer" destination="ApE-0u-HlX" id="Xi0-2D-RtX"/>
+                        <outlet property="tableView" destination="7jM-Xb-2tu" id="YEF-hJ-RS5"/>
                         <outlet property="toggleSegmentControl" destination="0UQ-Bi-ys3" id="Dy9-uf-N8G"/>
                     </connections>
                 </viewController>

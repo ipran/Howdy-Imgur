@@ -29,3 +29,8 @@ struct HTTPHeaderField {
 
 // Show/Hide log details
 let logActivity = true
+
+struct ImgurMessages {
+    static let noImagesFound = "No Images found for the given input!"
+    static let somethingWentWrong = "Something went wrong!"
+}

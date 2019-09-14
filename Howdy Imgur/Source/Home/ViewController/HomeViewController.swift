@@ -63,17 +63,18 @@ extension HomeViewController: HomeViewProtocol {
 // MARK: - Tableview Delegate & Datasource
 extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gallery?.data.count ?? 0
+        return gallery?.data?.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GalleryImageTableViewCell.identifier) as! GalleryImageTableViewCell
         
-        guard let data = gallery?.data[indexPath.row] else {
+        guard let data = gallery?.data?[indexPath.row] else {
             return cell
         }
+        cell.selectionStyle = .none
         cell.titleLabel.text = data.title
-        cell.imageCountLabel.text = data.imagesCount as! String
+        cell.imageCountLabel.text = data.images_count as? String
 //        cell.imageView?.image = data.images?[0].link
         return cell
         

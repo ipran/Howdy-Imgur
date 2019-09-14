@@ -208,7 +208,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-kW-wZm" userLabel="Bottom View Container">
                                 <rect key="frame" x="0.0" y="212" width="414" height="684"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -216,7 +216,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uNh-hA-xEP" id="xc7-3K-RGN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="399.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Ic-Cej" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">

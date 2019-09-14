@@ -23,7 +23,7 @@
 		3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */; };
 		3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* Gallery.swift */; };
 		3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE79232BE5C2003F2414 /* Image.swift */; };
-		3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tag.swift */; };
+		3D11FE7C232BE6B1003F2414 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tags.swift */; };
 		3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE82232C108A003F2414 /* HomeViewController.swift */; };
 		3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE86232C1962003F2414 /* ShadowView.swift */; };
 		3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE88232C1ACE003F2414 /* UITextField.swift */; };
@@ -79,7 +79,7 @@
 		3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPIManager.swift; sourceTree = "<group>"; };
 		3D11FE77232BCDD5003F2414 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		3D11FE79232BE5C2003F2414 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		3D11FE7B232BE6B1003F2414 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3D11FE7B232BE6B1003F2414 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		3D11FE82232C108A003F2414 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D11FE86232C1962003F2414 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		3D11FE88232C1ACE003F2414 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
@@ -302,7 +302,7 @@
 			children = (
 				3D11FE77232BCDD5003F2414 /* Gallery.swift */,
 				3D11FE79232BE5C2003F2414 /* Image.swift */,
-				3D11FE7B232BE6B1003F2414 /* Tag.swift */,
+				3D11FE7B232BE6B1003F2414 /* Tags.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -533,7 +533,7 @@
 				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,
 				3D11FE9C232CD74F003F2414 /* HomeViewProtocols.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
-				3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */,
+				3D11FE7C232BE6B1003F2414 /* Tags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

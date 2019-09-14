@@ -37,6 +37,7 @@
 		3D11FEA2232CEBF7003F2414 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */; };
 		3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */; };
 		3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA6232D0905003F2414 /* UITableViewCell.swift */; };
+		3D11FEAB232D5A30003F2414 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEAA232D5A30003F2414 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
 		3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageTableViewCell.swift; sourceTree = "<group>"; };
 		3D11FEA6232D0905003F2414 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		3D11FEAA232D5A30003F2414 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +278,7 @@
 				3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */,
 				3D11FE91232CC520003F2414 /* UIViewController.swift */,
 				3D11FEA6232D0905003F2414 /* UITableViewCell.swift */,
+				3D11FEAA232D5A30003F2414 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */,
 				3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */,
 				3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */,
+				3D11FEAB232D5A30003F2414 /* UIImageView.swift in Sources */,
 				3D11FE9F232CDCE3003F2414 /* HomeViewPresenter.swift in Sources */,
 				3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,

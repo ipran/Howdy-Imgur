@@ -74,8 +74,17 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
         }
         cell.selectionStyle = .none
         cell.titleLabel.text = data.title
-        cell.imageCountLabel.text = data.images_count as? String
-//        cell.imageView?.image = data.images?[0].link
+        let imageCount = data.images?.count ?? Int(truncating: 0 as NSNumber)
+        if imageCount > 1 {
+            cell.imageCountLabel.text = "\(imageCount - 1) more"
+            
+        }
+        let imageType = data.images?[0].type
+        if (imageType == "image/jpeg") || (imageType == "image/png") {
+            let imageURL = data.images?[0].link
+            cell.imageView?.cacheImage(urlString: imageURL ?? "")
+            
+        }
         return cell
         
     }

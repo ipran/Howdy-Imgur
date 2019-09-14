@@ -13,6 +13,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentControlContainer: ShadowView!
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noResponseLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var appInfoLabel: UILabel!
+    @IBOutlet weak var segmentControlViewHeightConstraint: NSLayoutConstraint!
+    
+    
     // Delclarations
     var presenter: HomeViewPresenterProtocol?
     var gallery: Gallery?
@@ -29,6 +35,7 @@ class HomeViewController: UIViewController {
         
         HomeViewRouter.createHomeViewModule(homeViewRef: self)
         initialSetup()
+        activityIndicatorView.startAnimating()
         presenter?.viewDidLoad()
         
     }
@@ -38,10 +45,16 @@ class HomeViewController: UIViewController {
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
     func showImageList(with gallery: Gallery) {
+        self.noResponseLabel.isHidden = true
         self.gallery = gallery
+        self.activityIndicatorView.stopAnimating()
+        self.tableView.reloadData()
         
     }
     func showAPIError(message: String) {
+        self.noResponseLabel.isHidden = false
+        self.noResponseLabel.text = message
+        self.activityIndicatorView.stopAnimating()
         
     }
     
@@ -50,11 +63,24 @@ extension HomeViewController: HomeViewProtocol {
 // MARK: - Tableview Delegate & Datasource
 extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return gallery?.data.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: GalleryImageTableViewCell.identifier) as! GalleryImageTableViewCell
+        
+        guard let data = gallery?.data[indexPath.row] else {
+            return cell
+        }
+        cell.titleLabel.text = data.title
+        cell.imageCountLabel.text = data.imagesCount as! String
+//        cell.imageView?.image = data.images?[0].link
+        return cell
+        
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 400
+        
     }
 
 }
@@ -69,6 +95,13 @@ extension HomeViewController {
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
         toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
+        
+        setupViews()
+        
+    }
+    func setupViews() {
+        // Don't show segment control initially
+//        segmentControlViewHeightConstraint.constant = 0
         
     }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {

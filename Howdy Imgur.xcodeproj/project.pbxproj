@@ -35,6 +35,8 @@
 		3D11FE9C232CD74F003F2414 /* HomeViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE9B232CD74F003F2414 /* HomeViewProtocols.swift */; };
 		3D11FE9F232CDCE3003F2414 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE9E232CDCE3003F2414 /* HomeViewPresenter.swift */; };
 		3D11FEA2232CEBF7003F2414 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */; };
+		3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */; };
+		3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA6232D0905003F2414 /* UITableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		3D11FE9B232CD74F003F2414 /* HomeViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocols.swift; sourceTree = "<group>"; };
 		3D11FE9E232CDCE3003F2414 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
 		3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageTableViewCell.swift; sourceTree = "<group>"; };
+		3D11FEA6232D0905003F2414 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 		3D11FE5D232B90F3003F2414 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3D11FEA3232D026E003F2414 /* View */,
 				3D11FEA0232CEBD5003F2414 /* Interactor */,
 				3D11FE9D232CDCC0003F2414 /* Presenter */,
 				3D11FE9A232CD728003F2414 /* Protocols */,
@@ -270,6 +275,7 @@
 				3D11FE8D232CB54B003F2414 /* UIView.swift */,
 				3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */,
 				3D11FE91232CC520003F2414 /* UIViewController.swift */,
+				3D11FEA6232D0905003F2414 /* UITableViewCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -362,6 +368,14 @@
 				3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3D11FEA3232D026E003F2414 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -503,7 +517,9 @@
 				3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */,
 				3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */,
 				3D11FE9F232CDCE3003F2414 /* HomeViewPresenter.swift in Sources */,
+				3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,
+				3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */,
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
 				3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */,
 				3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */,

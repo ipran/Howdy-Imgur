@@ -13,10 +13,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentControlContainer: ShadowView!
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    // Delclarations
+    var presenter: HomeViewPresenterProtocol?
+    var gallery: Gallery?
     
     /**
      Instantiate a controller
-    */
+     */
     static func instantiateViewController() -> HomeViewController {
         return UIStoryboard.home().instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
         
@@ -24,16 +27,50 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        segmentControlContainer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        // Set color of segment
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
-        
-        toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
+        HomeViewRouter.createHomeViewModule(homeViewRef: self)
+        initialSetup()
+        presenter?.viewDidLoad()
         
     }
     
+}
+
+// MARK: - Presenter Protocols
+extension HomeViewController: HomeViewProtocol {
+    func showImageList(with gallery: Gallery) {
+        self.gallery = gallery
+        
+    }
+    func showAPIError(message: String) {
+        
+    }
+    
+}
+
+// MARK: - Tableview Delegate & Datasource
+extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+        
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
+}
+
+// MARK: - Utility Functions
+extension HomeViewController {
+    /**
+     Doing the initial setup for the controller
+     */
+    func initialSetup() {
+        // Setup Segment Control
+        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
+        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
+        toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
+        
+    }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
             
@@ -49,7 +86,6 @@ class HomeViewController: UIViewController {
         }
         
     }
-    
     func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)

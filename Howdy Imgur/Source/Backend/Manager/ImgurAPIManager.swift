@@ -23,12 +23,12 @@ class ImgurAPIManager: BaseAPIManager {
     /**
     Fetch home data based on input text
     */
-    func fetchDataforInputText(queryParameter: String, completion: @escaping(APIResponse<Gallery,APIError>) -> Void) {
+    func fetchDataforInputText(queryParameter: String, completion: @escaping(APIResponse<ImgurGallery,APIError>) -> Void) {
         let endpoint = ImgurFeed.gallerySearch(queryParam: queryParameter)
         var request = endpoint.request
         request.method = HTTPMethod.get
-        fetch(with: request, decode: { json -> Gallery? in
-            guard let galleryResult = json as? Gallery else { return nil }
+        fetch(with: request, decode: { json -> ImgurGallery? in
+            guard let galleryResult = json as? ImgurGallery else { return nil }
             return galleryResult
         }, completion: completion)
         

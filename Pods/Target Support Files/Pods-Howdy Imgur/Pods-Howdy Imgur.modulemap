@@ -1,0 +1,6 @@
+module Pods_Howdy_Imgur {
+  umbrella header "Pods-Howdy Imgur-umbrella.h"
+
+  export *
+  module * { export * }
+}

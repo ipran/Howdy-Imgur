@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct ImgurContants {
+    static let howdyImgur = "Howdy Imgur"
+}
+
 // Hold storyboard name constants
 struct ImgurStoryboard {
     static let home = "Home"
@@ -16,7 +20,7 @@ struct ImgurStoryboard {
 
 struct ImgurURLConstants {
     static let baseURL = "https://api.imgur.com"
-    static let gallerySearchPath = "/3/gallery/search/top/week/1"
+    static let gallerySearchPath = "/3/gallery/search/top/week"
     static let queryParamSerachKeyName = "q"
     
 }
@@ -29,3 +33,16 @@ struct HTTPHeaderField {
 
 // Show/Hide log details
 let logActivity = true
+
+struct ImgurMessages {
+    static let noImagesFound = "No Images found for the given input!"
+    static let somethingWentWrong = "Something went wrong!"
+}
+
+// Accessibility Identifier for UITesting
+struct ImgurAccessibilityIdentifier {
+    static let homeTableView = "HomeTableView"
+    static let toggleSwitch = "ToggleSwitch"
+    static let segmnetAllLabel = "All"
+    
+}

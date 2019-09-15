@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FBE48A894C723987B7E4616 /* libPods-Howdy ImgurUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8574C53153B926630B2EF98 /* libPods-Howdy ImgurUITests.a */; };
 		3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE26232B7A63003F2414 /* AppDelegate.swift */; };
-		3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE28232B7A63003F2414 /* ViewController.swift */; };
 		3D11FE2C232B7A63003F2414 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE2A232B7A63003F2414 /* Home.storyboard */; };
 		3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE2D232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld */; };
 		3D11FE31232B7A64003F2414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE30232B7A64003F2414 /* Assets.xcassets */; };
 		3D11FE34232B7A64003F2414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */; };
-		3D11FE3F232B7A64003F2414 /* Howdy_ImgurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */; };
+		3D11FE3F232B7A64003F2414 /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */; };
 		3D11FE4A232B7A64003F2414 /* Howdy_ImgurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE49232B7A64003F2414 /* Howdy_ImgurUITests.swift */; };
 		3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE61232B9B9A003F2414 /* Endpoint.swift */; };
 		3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE63232B9C66003F2414 /* HTTPMethod.swift */; };
@@ -22,9 +22,9 @@
 		3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6E232BBB40003F2414 /* APIResponse.swift */; };
 		3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */; };
 		3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */; };
-		3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* Gallery.swift */; };
+		3D11FE78232BCDD5003F2414 /* ImgurGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */; };
 		3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE79232BE5C2003F2414 /* Image.swift */; };
-		3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tag.swift */; };
+		3D11FE7C232BE6B1003F2414 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tags.swift */; };
 		3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE82232C108A003F2414 /* HomeViewController.swift */; };
 		3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE86232C1962003F2414 /* ShadowView.swift */; };
 		3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE88232C1ACE003F2414 /* UITextField.swift */; };
@@ -32,6 +32,17 @@
 		3D11FE8E232CB54B003F2414 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE8D232CB54B003F2414 /* UIView.swift */; };
 		3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */; };
 		3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE91232CC520003F2414 /* UIViewController.swift */; };
+		3D11FE99232CD71A003F2414 /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE98232CD71A003F2414 /* HomeViewRouter.swift */; };
+		3D11FE9C232CD74F003F2414 /* HomeViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE9B232CD74F003F2414 /* HomeViewProtocols.swift */; };
+		3D11FE9F232CDCE3003F2414 /* HomeViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE9E232CDCE3003F2414 /* HomeViewPresenter.swift */; };
+		3D11FEA2232CEBF7003F2414 /* HomeViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */; };
+		3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */; };
+		3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA6232D0905003F2414 /* UITableViewCell.swift */; };
+		3D11FEAD232DE1E4003F2414 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEAC232DE1E4003F2414 /* Double.swift */; };
+		3D11FEB4232E5116003F2414 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB3232E5116003F2414 /* APITests.swift */; };
+		3D11FEB8232E6A31003F2414 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB7232E6A31003F2414 /* UIImageView.swift */; };
+		952149A0E901EBF1890328D1 /* libPods-Howdy ImgurTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95941CC58F2B8A8A3F42980A /* libPods-Howdy ImgurTests.a */; };
+		E8812F9183B7D492646EE521 /* libPods-Howdy Imgur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,14 +65,13 @@
 /* Begin PBXFileReference section */
 		3D11FE23232B7A63003F2414 /* Howdy Imgur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Howdy Imgur.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11FE26232B7A63003F2414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D11FE28232B7A63003F2414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D11FE2B232B7A63003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		3D11FE2E232B7A63003F2414 /* Howdy_Imgur.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Howdy_Imgur.xcdatamodel; sourceTree = "<group>"; };
 		3D11FE30232B7A64003F2414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D11FE33232B7A64003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D11FE35232B7A64003F2414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D11FE3A232B7A64003F2414 /* Howdy ImgurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Howdy ImgurTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Howdy_ImgurTests.swift; sourceTree = "<group>"; };
+		3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
 		3D11FE40232B7A64003F2414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D11FE45232B7A64003F2414 /* Howdy ImgurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Howdy ImgurUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11FE49232B7A64003F2414 /* Howdy_ImgurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Howdy_ImgurUITests.swift; sourceTree = "<group>"; };
@@ -73,9 +83,9 @@
 		3D11FE6E232BBB40003F2414 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIManager.swift; sourceTree = "<group>"; };
 		3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPIManager.swift; sourceTree = "<group>"; };
-		3D11FE77232BCDD5003F2414 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallery.swift; sourceTree = "<group>"; };
 		3D11FE79232BE5C2003F2414 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		3D11FE7B232BE6B1003F2414 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3D11FE7B232BE6B1003F2414 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		3D11FE82232C108A003F2414 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3D11FE86232C1962003F2414 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		3D11FE88232C1ACE003F2414 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
@@ -83,6 +93,24 @@
 		3D11FE8D232CB54B003F2414 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		3D11FE91232CC520003F2414 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		3D11FE98232CD71A003F2414 /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
+		3D11FE9B232CD74F003F2414 /* HomeViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocols.swift; sourceTree = "<group>"; };
+		3D11FE9E232CDCE3003F2414 /* HomeViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewPresenter.swift; sourceTree = "<group>"; };
+		3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewInteractor.swift; sourceTree = "<group>"; };
+		3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryImageTableViewCell.swift; sourceTree = "<group>"; };
+		3D11FEA6232D0905003F2414 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		3D11FEAC232DE1E4003F2414 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		3D11FEB3232E5116003F2414 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		3D11FEB7232E6A31003F2414 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howdy Imgur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5931524E63D0CEABD4D6C0DE /* Pods-Howdy ImgurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurTests.debug.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurTests/Pods-Howdy ImgurTests.debug.xcconfig"; sourceTree = "<group>"; };
+		65C8B85EB127B5DC2ECDEC00 /* Pods-Howdy ImgurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurUITests.release.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurUITests/Pods-Howdy ImgurUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BD5165B6B84E4F7FA65CA2F /* Pods-Howdy ImgurUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurUITests.debug.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurUITests/Pods-Howdy ImgurUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		95941CC58F2B8A8A3F42980A /* libPods-Howdy ImgurTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howdy ImgurTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA70DDD1DC9F69B882108D40 /* Pods-Howdy Imgur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy Imgur.debug.xcconfig"; path = "Target Support Files/Pods-Howdy Imgur/Pods-Howdy Imgur.debug.xcconfig"; sourceTree = "<group>"; };
+		E8574C53153B926630B2EF98 /* libPods-Howdy ImgurUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howdy ImgurUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2DC12F6AA27A1C49751755B /* Pods-Howdy Imgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy Imgur.release.xcconfig"; path = "Target Support Files/Pods-Howdy Imgur/Pods-Howdy Imgur.release.xcconfig"; sourceTree = "<group>"; };
+		F6C04EEA6E629C1B66C1596D /* Pods-Howdy ImgurTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurTests.release.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurTests/Pods-Howdy ImgurTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8812F9183B7D492646EE521 /* libPods-Howdy Imgur.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952149A0E901EBF1890328D1 /* libPods-Howdy ImgurTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +134,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FBE48A894C723987B7E4616 /* libPods-Howdy ImgurUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37019102BD0BD7CB2B863471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA70DDD1DC9F69B882108D40 /* Pods-Howdy Imgur.debug.xcconfig */,
+				F2DC12F6AA27A1C49751755B /* Pods-Howdy Imgur.release.xcconfig */,
+				5931524E63D0CEABD4D6C0DE /* Pods-Howdy ImgurTests.debug.xcconfig */,
+				F6C04EEA6E629C1B66C1596D /* Pods-Howdy ImgurTests.release.xcconfig */,
+				7BD5165B6B84E4F7FA65CA2F /* Pods-Howdy ImgurUITests.debug.xcconfig */,
+				65C8B85EB127B5DC2ECDEC00 /* Pods-Howdy ImgurUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3D11FE1A232B7A63003F2414 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +161,8 @@
 				3D11FE3D232B7A64003F2414 /* Howdy ImgurTests */,
 				3D11FE48232B7A64003F2414 /* Howdy ImgurUITests */,
 				3D11FE24232B7A63003F2414 /* Products */,
+				37019102BD0BD7CB2B863471 /* Pods */,
+				EBA19BACAA50BA54DEE862B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +188,8 @@
 		3D11FE3D232B7A64003F2414 /* Howdy ImgurTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */,
+				3D11FEB2232E50F5003F2414 /* APITests */,
+				3D11FEB1232E4B2A003F2414 /* HomeTests */,
 				3D11FE40232B7A64003F2414 /* Info.plist */,
 			);
 			path = "Howdy ImgurTests";
@@ -171,8 +218,8 @@
 		3D11FE58232B901E003F2414 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE8A232C21D0003F2414 /* Font */,
 				3D11FE35232B7A64003F2414 /* Info.plist */,
+				3D11FE8A232C21D0003F2414 /* Font */,
 				3D11FE5B232B9073003F2414 /* Coredata */,
 				3D11FE5A232B9046003F2414 /* Storyboard */,
 				3D11FE59232B903D003F2414 /* Assets */,
@@ -216,11 +263,11 @@
 		3D11FE5D232B90F3003F2414 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE81232C0750003F2414 /* Router */,
-				3D11FE80232C0746003F2414 /* Presenter */,
-				3D11FE7F232C072F003F2414 /* Interactor */,
-				3D11FE7E232C0715003F2414 /* Protocols */,
-				3D11FE7D232C0707003F2414 /* View */,
+				3D11FEA3232D026E003F2414 /* View */,
+				3D11FEA0232CEBD5003F2414 /* Interactor */,
+				3D11FE9D232CDCC0003F2414 /* Presenter */,
+				3D11FE9A232CD728003F2414 /* Protocols */,
+				3D11FE97232CD6F7003F2414 /* Router */,
 				3D11FE76232BCDBB003F2414 /* ViewController */,
 				3D11FE75232BCD82003F2414 /* Entity */,
 			);
@@ -249,7 +296,6 @@
 		3D11FE65232B9CA8003F2414 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE85232C18E7003F2414 /* Utils */,
 				3D11FE84232C18E0003F2414 /* View */,
 				3D11FE69232BA11F003F2414 /* Constants */,
 				3D11FE66232B9D42003F2414 /* Extension */,
@@ -265,6 +311,9 @@
 				3D11FE8D232CB54B003F2414 /* UIView.swift */,
 				3D11FE8F232CC0D6003F2414 /* UIStoryboard.swift */,
 				3D11FE91232CC520003F2414 /* UIViewController.swift */,
+				3D11FEA6232D0905003F2414 /* UITableViewCell.swift */,
+				3D11FEAC232DE1E4003F2414 /* Double.swift */,
+				3D11FEB7232E6A31003F2414 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -289,9 +338,9 @@
 		3D11FE75232BCD82003F2414 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE77232BCDD5003F2414 /* Gallery.swift */,
+				3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */,
 				3D11FE79232BE5C2003F2414 /* Image.swift */,
-				3D11FE7B232BE6B1003F2414 /* Tag.swift */,
+				3D11FE7B232BE6B1003F2414 /* Tags.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -299,45 +348,9 @@
 		3D11FE76232BCDBB003F2414 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE28232B7A63003F2414 /* ViewController.swift */,
 				3D11FE82232C108A003F2414 /* HomeViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		3D11FE7D232C0707003F2414 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3D11FE7E232C0715003F2414 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		3D11FE7F232C072F003F2414 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		3D11FE80232C0746003F2414 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		3D11FE81232C0750003F2414 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		3D11FE84232C18E0003F2414 /* View */ = {
@@ -348,19 +361,78 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		3D11FE85232C18E7003F2414 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		3D11FE8A232C21D0003F2414 /* Font */ = {
 			isa = PBXGroup;
 			children = (
 				3D11FE8B232C21EE003F2414 /* lato */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		3D11FE97232CD6F7003F2414 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE98232CD71A003F2414 /* HomeViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3D11FE9A232CD728003F2414 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE9B232CD74F003F2414 /* HomeViewProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3D11FE9D232CDCC0003F2414 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE9E232CDCE3003F2414 /* HomeViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3D11FEA0232CEBD5003F2414 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FEA1232CEBF7003F2414 /* HomeViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3D11FEA3232D026E003F2414 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3D11FEB1232E4B2A003F2414 /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
+		3D11FEB2232E50F5003F2414 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FEB3232E5116003F2414 /* APITests.swift */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		EBA19BACAA50BA54DEE862B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */,
+				95941CC58F2B8A8A3F42980A /* libPods-Howdy ImgurTests.a */,
+				E8574C53153B926630B2EF98 /* libPods-Howdy ImgurUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +442,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D11FE4E232B7A64003F2414 /* Build configuration list for PBXNativeTarget "Howdy Imgur" */;
 			buildPhases = (
+				62617E844630FC37AEE42B6F /* [CP] Check Pods Manifest.lock */,
 				3D11FE1F232B7A63003F2414 /* Sources */,
 				3D11FE20232B7A63003F2414 /* Frameworks */,
 				3D11FE21232B7A63003F2414 /* Resources */,
@@ -387,6 +460,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D11FE51232B7A64003F2414 /* Build configuration list for PBXNativeTarget "Howdy ImgurTests" */;
 			buildPhases = (
+				23407406DB12073B03C7EDD9 /* [CP] Check Pods Manifest.lock */,
 				3D11FE36232B7A64003F2414 /* Sources */,
 				3D11FE37232B7A64003F2414 /* Frameworks */,
 				3D11FE38232B7A64003F2414 /* Resources */,
@@ -405,6 +479,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D11FE54232B7A64003F2414 /* Build configuration list for PBXNativeTarget "Howdy ImgurUITests" */;
 			buildPhases = (
+				CFC0CBEDB1582D7A2ABCA561 /* [CP] Check Pods Manifest.lock */,
 				3D11FE41232B7A64003F2414 /* Sources */,
 				3D11FE42232B7A64003F2414 /* Frameworks */,
 				3D11FE43232B7A64003F2414 /* Resources */,
@@ -490,30 +565,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23407406DB12073B03C7EDD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Howdy ImgurTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62617E844630FC37AEE42B6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Howdy Imgur-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFC0CBEDB1582D7A2ABCA561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Howdy ImgurUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D11FE1F232B7A63003F2414 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D11FE29232B7A63003F2414 /* ViewController.swift in Sources */,
+				3D11FE99232CD71A003F2414 /* HomeViewRouter.swift in Sources */,
+				3D11FEA2232CEBF7003F2414 /* HomeViewInteractor.swift in Sources */,
 				3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */,
 				3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */,
 				3D11FE92232CC520003F2414 /* UIViewController.swift in Sources */,
 				3D11FE89232C1ACE003F2414 /* UITextField.swift in Sources */,
+				3D11FE9F232CDCE3003F2414 /* HomeViewPresenter.swift in Sources */,
+				3D11FEA5232D02BB003F2414 /* GalleryImageTableViewCell.swift in Sources */,
+				3D11FEAD232DE1E4003F2414 /* Double.swift in Sources */,
 				3D11FE27232B7A63003F2414 /* AppDelegate.swift in Sources */,
+				3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */,
 				3D11FE6B232BA1A4003F2414 /* ImgurConstants.swift in Sources */,
 				3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */,
 				3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
-				3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */,
+				3D11FE78232BCDD5003F2414 /* ImgurGallery.swift in Sources */,
+				3D11FEB8232E6A31003F2414 /* UIImageView.swift in Sources */,
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
 				3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,
 				3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */,
 				3D11FE8E232CB54B003F2414 /* UIView.swift in Sources */,
 				3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */,
+				3D11FE9C232CD74F003F2414 /* HomeViewProtocols.swift in Sources */,
 				3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */,
-				3D11FE7C232BE6B1003F2414 /* Tag.swift in Sources */,
+				3D11FE7C232BE6B1003F2414 /* Tags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +672,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D11FE3F232B7A64003F2414 /* Howdy_ImgurTests.swift in Sources */,
+				3D11FEB4232E5116003F2414 /* APITests.swift in Sources */,
+				3D11FE3F232B7A64003F2414 /* HomeViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +838,7 @@
 		};
 		3D11FE4F232B7A64003F2414 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA70DDD1DC9F69B882108D40 /* Pods-Howdy Imgur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,6 +857,7 @@
 		};
 		3D11FE50232B7A64003F2414 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DC12F6AA27A1C49751755B /* Pods-Howdy Imgur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -722,6 +876,7 @@
 		};
 		3D11FE52232B7A64003F2414 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5931524E63D0CEABD4D6C0DE /* Pods-Howdy ImgurTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -743,6 +898,7 @@
 		};
 		3D11FE53232B7A64003F2414 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C04EEA6E629C1B66C1596D /* Pods-Howdy ImgurTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -764,6 +920,7 @@
 		};
 		3D11FE55232B7A64003F2414 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BD5165B6B84E4F7FA65CA2F /* Pods-Howdy ImgurUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -784,6 +941,7 @@
 		};
 		3D11FE56232B7A64003F2414 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C8B85EB127B5DC2ECDEC00 /* Pods-Howdy ImgurUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

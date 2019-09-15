@@ -11,8 +11,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Medium.ttf">
+            <string>Lato-Medium</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
+        </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -43,6 +52,9 @@
                                                                 <color key="value" red="0.56862745098039214" green="0.56862745098039214" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xFh-ic-VxI"/>
+                                                        </connections>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-j7-CPa">
                                                         <rect key="frame" x="8" y="11" width="14" height="14"/>
@@ -82,7 +94,7 @@
                                         <rect key="frame" x="0.0" y="68" width="414" height="72"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for the top images of the week from the imgur gallery." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-BN-0P7">
-                                                <rect key="frame" x="46" y="0.0" width="322" height="34"/>
+                                                <rect key="frame" x="61" y="0.0" width="292.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" red="0.56000000000000005" green="0.56000000000000005" blue="0.57999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -90,19 +102,20 @@
                                         </subviews>
                                         <color key="backgroundColor" name="Imgur_BackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="leading" secondItem="iQQ-FT-qoL" secondAttribute="leading" constant="46" id="277-uC-2dt"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pp1-BN-0P7" secondAttribute="trailing" constant="46" id="EyI-ZT-Ltm"/>
+                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iQQ-FT-qoL" secondAttribute="leading" constant="46" id="277-uC-2dt"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pp1-BN-0P7" secondAttribute="trailing" constant="46" id="EyI-ZT-Ltm"/>
                                             <constraint firstAttribute="height" constant="72" id="dBS-9v-Zos"/>
                                             <constraint firstItem="Pp1-BN-0P7" firstAttribute="top" secondItem="iQQ-FT-qoL" secondAttribute="top" id="jNi-Ev-B7Q"/>
+                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="centerX" secondItem="iQQ-FT-qoL" secondAttribute="centerX" id="xou-vj-b51"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfJ-FL-ruu" userLabel="Segment Control View Container">
                                         <rect key="frame" x="0.0" y="112" width="414" height="56"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-cH-M3K" customClass="ShadowView" customModule="IRider" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4W-cH-M3K" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
                                                 <rect key="frame" x="107" y="0.0" width="200" height="56"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApE-0u-HlX" customClass="ShadowView" customModule="IRider" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ApE-0u-HlX" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="8" width="160" height="40"/>
                                                         <subviews>
                                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0UQ-Bi-ys3">
@@ -135,6 +148,7 @@
                                                             <constraint firstItem="qef-x1-uiV" firstAttribute="centerY" secondItem="0UQ-Bi-ys3" secondAttribute="centerY" id="0Ug-tY-Pai"/>
                                                             <constraint firstItem="qef-x1-uiV" firstAttribute="top" secondItem="ApE-0u-HlX" secondAttribute="top" constant="12" id="2MG-U7-LRR"/>
                                                             <constraint firstItem="Ob7-Sg-TCh" firstAttribute="top" secondItem="ApE-0u-HlX" secondAttribute="top" constant="12" id="7z5-Aj-Gce"/>
+                                                            <constraint firstItem="qef-x1-uiV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ob7-Sg-TCh" secondAttribute="trailing" constant="8" symbolic="YES" id="Lp9-qa-mC7"/>
                                                             <constraint firstAttribute="trailing" secondItem="qef-x1-uiV" secondAttribute="trailing" constant="25" id="ZO3-dz-wqm"/>
                                                             <constraint firstItem="Ob7-Sg-TCh" firstAttribute="leading" secondItem="ApE-0u-HlX" secondAttribute="leading" constant="29" id="e60-BH-2UW"/>
                                                             <constraint firstItem="0UQ-Bi-ys3" firstAttribute="leading" secondItem="ApE-0u-HlX" secondAttribute="leading" constant="0.10000000000000001" id="g3F-ds-UMg"/>
@@ -191,7 +205,6 @@
                                     <constraint firstAttribute="trailing" secondItem="iQQ-FT-qoL" secondAttribute="trailing" id="FuK-gC-Q1B"/>
                                     <constraint firstAttribute="trailing" secondItem="tHb-dD-GpE" secondAttribute="trailing" id="HGg-y7-S5D"/>
                                     <constraint firstItem="tHb-dD-GpE" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="top" id="K2r-GY-8fW"/>
-                                    <constraint firstItem="WfJ-FL-ruu" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="top" constant="112" id="Rd5-og-bgj"/>
                                     <constraint firstItem="iQQ-FT-qoL" firstAttribute="top" secondItem="tHb-dD-GpE" secondAttribute="bottom" id="bkl-I7-Ejb"/>
                                     <constraint firstItem="tHb-dD-GpE" firstAttribute="leading" secondItem="SNx-59-GVj" secondAttribute="leading" id="eCe-sZ-TYH"/>
                                     <constraint firstAttribute="height" constant="168" id="fWR-mM-mpw"/>
@@ -202,19 +215,111 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-kW-wZm" userLabel="Bottom View Container">
                                 <rect key="frame" x="0.0" y="212" width="414" height="684"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="400" id="uNh-hA-xEP">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GalleryImageTableViewCell" rowHeight="400" id="uNh-hA-xEP" customClass="GalleryImageTableViewCell" customModule="Howdy_Imgur" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uNh-hA-xEP" id="xc7-3K-RGN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="399.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Ic-Cej" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
+                                                            <rect key="frame" x="8" y="8" width="398" height="384"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ft-8t-LTU">
+                                                                    <rect key="frame" x="16" y="16" width="49" height="29"/>
+                                                                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="24"/>
+                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07/05/1990 01:10:22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lht-0w-KJa">
+                                                                    <rect key="frame" x="16" y="49" width="138" height="17"/>
+                                                                    <fontDescription key="fontDescription" name="Lato-Medium" family="Lato" pointSize="14"/>
+                                                                    <color key="textColor" name="Imgur_GrayColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="alT-DL-y2H">
+                                                                    <rect key="frame" x="0.0" y="74" width="398" height="302"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="398" id="QNO-7a-vjv"/>
+                                                                        <constraint firstAttribute="height" constant="302" id="gsw-Ph-XYo"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-8r-D0F" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
+                                                                    <rect key="frame" x="174" y="344" width="50" height="20"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
+                                                                            <rect key="frame" x="25" y="1" width="0.0" height="0.0"/>
+                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" name="Imgur_BlueColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="Amf-y3-jto"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="J0L-Jm-4My"/>
+                                                                        <constraint firstItem="tAa-9y-E0h" firstAttribute="top" secondItem="Xet-8r-D0F" secondAttribute="top" constant="1" id="L7e-R4-vi3"/>
+                                                                        <constraint firstItem="tAa-9y-E0h" firstAttribute="centerX" secondItem="Xet-8r-D0F" secondAttribute="centerX" id="Ynt-xS-PUb"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="Imgur_BackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="8ft-8t-LTU" firstAttribute="top" secondItem="Pct-Ic-Cej" secondAttribute="top" constant="16" id="71c-g7-AT7"/>
+                                                                <constraint firstItem="8ft-8t-LTU" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="9AN-9x-gnf"/>
+                                                                <constraint firstItem="Xet-8r-D0F" firstAttribute="centerX" secondItem="alT-DL-y2H" secondAttribute="centerX" id="MKB-CT-D4G"/>
+                                                                <constraint firstAttribute="bottom" secondItem="alT-DL-y2H" secondAttribute="bottom" constant="8" id="R3a-Tc-U6E"/>
+                                                                <constraint firstItem="lht-0w-KJa" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="S5N-8L-Are"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lht-0w-KJa" secondAttribute="trailing" constant="20" symbolic="YES" id="T8e-Rh-ofe"/>
+                                                                <constraint firstItem="alT-DL-y2H" firstAttribute="centerX" secondItem="Pct-Ic-Cej" secondAttribute="centerX" id="Vsc-hb-dqA"/>
+                                                                <constraint firstItem="alT-DL-y2H" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" id="X8N-Of-NI5"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ft-8t-LTU" secondAttribute="trailing" constant="20" symbolic="YES" id="bLE-8y-RfI"/>
+                                                                <constraint firstAttribute="trailing" secondItem="alT-DL-y2H" secondAttribute="trailing" id="i63-Bu-j2p"/>
+                                                                <constraint firstItem="lht-0w-KJa" firstAttribute="top" secondItem="8ft-8t-LTU" secondAttribute="bottom" constant="4" id="lg3-9y-SZ8"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Xet-8r-D0F" secondAttribute="bottom" constant="20" id="uGD-07-ioh"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Pct-Ic-Cej" secondAttribute="trailing" constant="8" id="6hn-vc-qEm"/>
+                                                        <constraint firstItem="Pct-Ic-Cej" firstAttribute="top" secondItem="xc7-3K-RGN" secondAttribute="top" constant="8" id="8Vx-pb-9fv"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Pct-Ic-Cej" secondAttribute="bottom" constant="8" id="W1n-RY-4OM"/>
+                                                        <constraint firstItem="Pct-Ic-Cej" firstAttribute="leading" secondItem="xc7-3K-RGN" secondAttribute="leading" constant="8" id="ych-PS-IYF"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="dateLabel" destination="lht-0w-KJa" id="dGE-ZR-Ejs"/>
+                                                    <outlet property="galleryImageView" destination="alT-DL-y2H" id="5v9-mw-nNy"/>
+                                                    <outlet property="imageCountHolderView" destination="Xet-8r-D0F" id="zIv-ex-tMg"/>
+                                                    <outlet property="imageCountLabel" destination="tAa-9y-E0h" id="evr-xj-tGn"/>
+                                                    <outlet property="titleLabel" destination="8ft-8t-LTU" id="GtI-aH-GV7"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="qYN-ra-Hj1"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="r9t-E0-DFW"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -225,34 +330,60 @@
                                     <constraint firstAttribute="bottom" secondItem="7jM-Xb-2tu" secondAttribute="bottom" id="nTE-VI-EJf"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgS-BK-sq1">
+                                <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OjA-qy-skk">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" name="Imgur_BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OjA-qy-skk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1da-iN-GFi"/>
+                            <constraint firstItem="XgS-BK-sq1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3l3-VX-MS3"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XgS-BK-sq1" secondAttribute="trailing" constant="10" id="9V2-mU-XQb"/>
                             <constraint firstAttribute="bottom" secondItem="GKO-kW-wZm" secondAttribute="bottom" id="Fbo-x8-XiR"/>
                             <constraint firstItem="GKO-kW-wZm" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="bottom" id="Txd-eS-Wg5"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gCC-Ap-RA3"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="irG-XI-xBf"/>
                             <constraint firstItem="GKO-kW-wZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mK3-Wd-gJl"/>
+                            <constraint firstItem="XgS-BK-sq1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="qeK-x6-xqj"/>
                             <constraint firstItem="GKO-kW-wZm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r2O-r0-dRh"/>
                             <constraint firstItem="SNx-59-GVj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rVH-EU-ijt"/>
+                            <constraint firstItem="XgS-BK-sq1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="slV-2c-VLF"/>
+                            <constraint firstItem="OjA-qy-skk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vYs-wZ-5r2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="OjA-qy-skk" id="uAj-Li-ZDZ"/>
+                        <outlet property="appInfoLabel" destination="Pp1-BN-0P7" id="EEW-TG-iFW"/>
+                        <outlet property="noResponseLabel" destination="XgS-BK-sq1" id="4ft-bG-PSX"/>
+                        <outlet property="searchField" destination="970-Ip-fi0" id="fAa-5j-eQu"/>
                         <outlet property="segmentControlContainer" destination="ApE-0u-HlX" id="Xi0-2D-RtX"/>
+                        <outlet property="segmentControlViewHeightConstraint" destination="FsD-pr-bzO" id="wLl-b4-GBL"/>
                         <outlet property="tableView" destination="7jM-Xb-2tu" id="YEF-hJ-RS5"/>
                         <outlet property="toggleSegmentControl" destination="0UQ-Bi-ys3" id="Dy9-uf-N8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163.768115942029" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="-56.25"/>
         </scene>
     </scenes>
     <resources>
         <image name="search_icon" width="32" height="32"/>
         <namedColor name="Imgur_BackgroundColor">
             <color red="0.05000000074505806" green="0.079999998211860657" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Imgur_BlueColor">
+            <color red="0.53700000047683716" green="0.54900002479553223" blue="0.70999997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Imgur_GrayColor">
+            <color red="0.76999998092651367" green="0.76999998092651367" blue="0.76999998092651367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Imgur_YellowColor">
             <color red="0.97000002861022949" green="0.70999997854232788" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

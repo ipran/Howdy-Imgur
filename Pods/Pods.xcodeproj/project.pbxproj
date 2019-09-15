@@ -1,0 +1,984 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		094FDBAAB4E9387C7A44F5C242B6934C /* ImageFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769CA13540265F3A416EF3989FEC2B0C /* ImageFormat.swift */; };
+		142387328A19D0E43467AF35355D5A24 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2691482D7820C5F99CD649A29D5F303 /* ExtensionHelpers.swift */; };
+		145231BF10228179CC1251430B5B5A50 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBEC7C3EA385FE24143DA8BD455AB9E /* Delegate.swift */; };
+		177326C2DF918217BEE5DDD718CAD768 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5AFF27FC5FCE0F0001CAC27E8D4A09 /* Kingfisher.swift */; };
+		24409906BC63C11C5E1DF68AB3A05F55 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF3B2A4F5C40833F62FCE81C15AFB6C /* FormatIndicatedCacheSerializer.swift */; };
+		27F4F95ED0E40D5530879A7CA74D03FA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5AD4AA7E56B37ADF3B7A3F7585055 /* ImageCache.swift */; };
+		2922E77E83A4412E9C261F6E9F77A787 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E19DA1611D9492ACEAC37112F52B3B /* ImageTransition.swift */; };
+		2BE33921A8929E8246BD256FA41E1815 /* Pods-Howdy ImgurUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 401654BCE175188EF5CA0EE5412A7AFB /* Pods-Howdy ImgurUITests-dummy.m */; };
+		35D40139B46B749607D0DBD3F9EF7DFA /* ImageDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC355BF1694E4A3830C059BA19DF650 /* ImageDataProvider.swift */; };
+		3A339A4C67379EAC42E9DA1B5FD63118 /* GIFAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8400BBD31ED884660FAFB69663DBF0D5 /* GIFAnimatedImage.swift */; };
+		3B2EC619FFE55B4C1F6C182F7C1A4227 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4AE945313899F68D36D0697C8923424 /* Result.swift */; };
+		454DB9769435D77E3666B9243E8CE5F2 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D966686FEFB333A22CF0DD56732B21F0 /* KingfisherManager.swift */; };
+		56C3E34CAE2342CD459B4DCDD9F0E7C1 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F6BB46F7CD9114A423B8D2AE1431F8 /* RedirectHandler.swift */; };
+		5823FBFA59EC6E78CE400DBB25F6A54B /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F3B31C89882DB48175113928698AE /* RequestModifier.swift */; };
+		585AFA9880BC451073568F0330B4A270 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6733F43446612BC843E795F148477E9E /* Kingfisher-dummy.m */; };
+		69561764CB9FF92B173CACDC80372BAB /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F5EB43993649B6204414D225C7F53 /* KingfisherOptionsInfo.swift */; };
+		69EDF0C27A10967B0AD718D445D8BA0E /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3E59F707155D338D38ED0ED97F0DFD /* DiskStorage.swift */; };
+		6B447BED1E178340EB757AD2ED691C8F /* AuthenticationChallengeResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFC33EFE76DEF204E4A6CB9B156CC8 /* AuthenticationChallengeResponsable.swift */; };
+		6BDF3E2B3B8B1B588AFCC89E5F610D54 /* ImageProgressive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D4D5878CAC6B95729F921254A98409 /* ImageProgressive.swift */; };
+		7339CDB33F6500F8198C04ED0AC6143E /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D6ADDA3F232C43C43FF739FB925F4 /* ImageView+Kingfisher.swift */; };
+		740C9657F052684A138B6EF0D4460E89 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4202778400B13C4CE3EC2C135DB3074 /* Indicator.swift */; };
+		748B687B1A1EA348713FB9B71FDD4959 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB39E31F1A055A36E22652B51BCC3894 /* MemoryStorage.swift */; };
+		77F2496AFE78F200BD3DBC59EF3EDB01 /* Pods-Howdy ImgurTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 132D5F8B00D4EBE57FC799BE13E29D32 /* Pods-Howdy ImgurTests-dummy.m */; };
+		7D63207AEA90325025CB63738EFF7C4E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1A23418EEBBACB64B37606061EE50D /* Storage.swift */; };
+		8029A16AF92BEAF4C3DDD8417EDB4988 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BB97E7322D0A59679254C66A9B356D /* Runtime.swift */; };
+		822E07B25D0F05B83DED09DD093E81EA /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7574B212B1D91F88CBC8C2700B40F3D /* Source.swift */; };
+		8D10D1134E426A6013108D3219ACD78A /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900121B6F40A7D23BC77C410D869EA4 /* SessionDelegate.swift */; };
+		8E3B6E3A6FFCEC942B78F8A5D16801D2 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE350C3962FB29FBF5D2C8C646EA76 /* Resource.swift */; };
+		9179F239B172AD193547056468968B5A /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FD600056DD6B33641F3F9B74551F72 /* Box.swift */; };
+		93B769C2E67F30D1368F1A25C18822AA /* CallbackQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE11CB09542B84B1E501B15601F3817 /* CallbackQueue.swift */; };
+		965B53FECEAFD8A8A4B64C452AE1775F /* Pods-Howdy Imgur-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BAACDF3C01F57E034DDB458D1695C58 /* Pods-Howdy Imgur-dummy.m */; };
+		9A4D229ACB875515D1715F217B57A992 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5811A013F15B120ED6F90016FC75AE /* ImageDownloader.swift */; };
+		9AA29A5E8B001A04E905A5991E1E8B0E /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9441C4A0EFD9374E8D8B7B39BDC80DD /* Filter.swift */; };
+		A0759B8FD90F373E1ED0AF2F02E0A4D8 /* ImageDownloaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DF125E4E2DECF82B4E3A792E536060 /* ImageDownloaderDelegate.swift */; };
+		A0D1DC49E98D4DE5AB0DCE11742C1732 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD67C87E609F7C7D703A74DFB84EDF57 /* String+MD5.swift */; };
+		A27CF9E2F587DFE1AF511A82F1962B70 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6B3DEC6D9F6742C7A5C8CAA9497E86 /* Image.swift */; };
+		AAC4D0B5BB6162296C44F87B6E217F35 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E4094828ECE8613D4EC0B1C95CBD49A /* Kingfisher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AB1C575EFFC8C227D93D83AFB8EEF726 /* Pods-Howdy Imgur-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF04FA782499D142D75D5AD4269D321F /* Pods-Howdy Imgur-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B0961FDF6538684FBC93BCEA50A7ECF7 /* ImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28798656D2BA3EED6D4EFD898A82589D /* ImageDrawing.swift */; };
+		B203EA353AC06C9B638F51055AF18338 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE278EA57CF988119A0B1AF6065F1361 /* AnimatedImageView.swift */; };
+		B838687761762EE9AC6E8A3B1B9C101D /* ImageDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396DB3EC8FBCCED38D2AC0B4916CDA32 /* ImageDataProcessor.swift */; };
+		BA7B3EC1B46849A60308AB25E58FD42F /* KingfisherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB9F85931696F5AB58B14A7B588E023 /* KingfisherError.swift */; };
+		C0EB3AE35EB79BE7B1D2D1023747410B /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A255E3A912527104D41DE5844D4EC /* CacheSerializer.swift */; };
+		CC9A554D6A41E73CEB8C43665C942B1F /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE699206A662ECE1DA792DA93E9E6A1 /* ImagePrefetcher.swift */; };
+		D0A77243594284D52A385F8FAD0F49CF /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1918AEE5700ABE72F430FC9344C9428 /* ImageProcessor.swift */; };
+		D4F5CAA40A4D15B48EB0316FD5E1206E /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5833CD5FA402117DEA2DFA3A407C775 /* UIButton+Kingfisher.swift */; };
+		D58C16526B6B5CF279A4D8D1AAB1F332 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A512E892C3F64943CC77FDA20F49C2 /* ImageModifier.swift */; };
+		DAF1E9224E0B47C93B1F47B33554284F /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C2832578BBEFFE4D7890ED4B2258818D /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF919B6B71CB47CF48D97E6EB1222792 /* SizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22626F2F400D2BB91280CE25D89AD8E /* SizeExtensions.swift */; };
+		E3F2D6217B8C2FAB2EAA3C90EF7618E8 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441239658D7D860067EBB50841FD7CDE /* Placeholder.swift */; };
+		E43D95E5D42D7BEEF2E30BC092D27155 /* Deprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEEEDDB28E58250E6B0CADABD2EA43C /* Deprecated.swift */; };
+		FD0390176B2CD6CBE039D06EA2261F41 /* SessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B413BB7551080A5EF58E778A79A2E4 /* SessionDataTask.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AE0BF5746DBAD84D2B7EE37173A0F53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AEAED1717C169008B50310B03BC351C;
+			remoteInfo = "Pods-Howdy Imgur";
+		};
+		ADF9D070BA33354056162C9D5E2F46DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AEAED1717C169008B50310B03BC351C;
+			remoteInfo = "Pods-Howdy Imgur";
+		};
+		BCE6B80F3DBEB67290D11BB09C6B47C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0190A16F5D2502D23EE82614D3D7ECC0 /* Pods-Howdy ImgurUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Howdy ImgurUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		106A84B4DFCFCB390483AE40499EF598 /* Pods-Howdy Imgur-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Howdy Imgur-acknowledgements.plist"; sourceTree = "<group>"; };
+		132D5F8B00D4EBE57FC799BE13E29D32 /* Pods-Howdy ImgurTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Howdy ImgurTests-dummy.m"; sourceTree = "<group>"; };
+		1B6F3B31C89882DB48175113928698AE /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/Networking/RequestModifier.swift; sourceTree = "<group>"; };
+		1FF3B2A4F5C40833F62FCE81C15AFB6C /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/Cache/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
+		2301CA3E0258EBC9465F31A67729D686 /* Pods-Howdy ImgurUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Howdy ImgurUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		24555BDF827BDABFA44EDC5EF0213747 /* libPods-Howdy ImgurUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Howdy ImgurUITests.a"; path = "libPods-Howdy ImgurUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FD600056DD6B33641F3F9B74551F72 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Utility/Box.swift; sourceTree = "<group>"; };
+		28798656D2BA3EED6D4EFD898A82589D /* ImageDrawing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDrawing.swift; path = Sources/Image/ImageDrawing.swift; sourceTree = "<group>"; };
+		2DBEC7C3EA385FE24143DA8BD455AB9E /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
+		396DB3EC8FBCCED38D2AC0B4916CDA32 /* ImageDataProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProcessor.swift; path = Sources/Networking/ImageDataProcessor.swift; sourceTree = "<group>"; };
+		3D2D6ADDA3F232C43C43FF739FB925F4 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		3FE699206A662ECE1DA792DA93E9E6A1 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/Networking/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		401654BCE175188EF5CA0EE5412A7AFB /* Pods-Howdy ImgurUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Howdy ImgurUITests-dummy.m"; sourceTree = "<group>"; };
+		40FFC33EFE76DEF204E4A6CB9B156CC8 /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
+		441239658D7D860067EBB50841FD7CDE /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Image/Placeholder.swift; sourceTree = "<group>"; };
+		4A2075556EF54FC726AF648E4FD19EC5 /* libPods-Howdy Imgur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Howdy Imgur.a"; path = "libPods-Howdy Imgur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5811A013F15B120ED6F90016FC75AE /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
+		556331CC82A72FED0535480058070DDD /* Pods-Howdy Imgur-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Howdy Imgur-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5D795039BBDBF4EC74B3AE8FEE2C9FE1 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		5E4094828ECE8613D4EC0B1C95CBD49A /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		60D4D5878CAC6B95729F921254A98409 /* ImageProgressive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProgressive.swift; path = Sources/Image/ImageProgressive.swift; sourceTree = "<group>"; };
+		61F6BB46F7CD9114A423B8D2AE1431F8 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
+		6733F43446612BC843E795F148477E9E /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		6A1A23418EEBBACB64B37606061EE50D /* Storage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Storage.swift; path = Sources/Cache/Storage.swift; sourceTree = "<group>"; };
+		6BAACDF3C01F57E034DDB458D1695C58 /* Pods-Howdy Imgur-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Howdy Imgur-dummy.m"; sourceTree = "<group>"; };
+		6CEEEDDB28E58250E6B0CADABD2EA43C /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/General/Deprecated.swift; sourceTree = "<group>"; };
+		70BB97E7322D0A59679254C66A9B356D /* Runtime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Runtime.swift; path = Sources/Utility/Runtime.swift; sourceTree = "<group>"; };
+		70BF96ABB01D7F566A502874D93A0647 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		769CA13540265F3A416EF3989FEC2B0C /* ImageFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageFormat.swift; path = Sources/Image/ImageFormat.swift; sourceTree = "<group>"; };
+		7C53AC968F33F697F6A8CD39AF90FFCB /* Pods-Howdy ImgurTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Howdy ImgurTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7F5AFF27FC5FCE0F0001CAC27E8D4A09 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/General/Kingfisher.swift; sourceTree = "<group>"; };
+		80D5AD4AA7E56B37ADF3B7A3F7585055 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/Cache/ImageCache.swift; sourceTree = "<group>"; };
+		8400BBD31ED884660FAFB69663DBF0D5 /* GIFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GIFAnimatedImage.swift; path = Sources/Image/GIFAnimatedImage.swift; sourceTree = "<group>"; };
+		84E19DA1611D9492ACEAC37112F52B3B /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/Image/ImageTransition.swift; sourceTree = "<group>"; };
+		911B354332BD2DC05AAF1A6405C7F6DE /* Pods-Howdy Imgur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy Imgur.debug.xcconfig"; sourceTree = "<group>"; };
+		9B9A255E3A912527104D41DE5844D4EC /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/Cache/CacheSerializer.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5F1B1D79A8AFD0D0DB4E3DA34B4F8C9 /* Pods-Howdy ImgurTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Howdy ImgurTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		A8A512E892C3F64943CC77FDA20F49C2 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
+		AB39E31F1A055A36E22652B51BCC3894 /* MemoryStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryStorage.swift; path = Sources/Cache/MemoryStorage.swift; sourceTree = "<group>"; };
+		AB6F5EB43993649B6204414D225C7F53 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/General/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		B7574B212B1D91F88CBC8C2700B40F3D /* Source.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Source.swift; path = Sources/General/ImageSource/Source.swift; sourceTree = "<group>"; };
+		BDC355BF1694E4A3830C059BA19DF650 /* ImageDataProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDataProvider.swift; path = Sources/General/ImageSource/ImageDataProvider.swift; sourceTree = "<group>"; };
+		BE188143AB7DA4034F662D11503D1871 /* Pods-Howdy ImgurTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy ImgurTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF364553B416196EC4FCED3D4C265DEB /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		BFC5FBA8539218D4E6509DE4BBD9D2B2 /* Pods-Howdy ImgurUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy ImgurUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2832578BBEFFE4D7890ED4B2258818D /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* libKingfisher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKingfisher.a; path = libKingfisher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5833CD5FA402117DEA2DFA3A407C775 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/Extensions/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		CD6B3DEC6D9F6742C7A5C8CAA9497E86 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
+		D2691482D7820C5F99CD649A29D5F303 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
+		D2AF993324D5D41B5115AFDB64318CF8 /* libPods-Howdy ImgurTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Howdy ImgurTests.a"; path = "libPods-Howdy ImgurTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4AE945313899F68D36D0697C8923424 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
+		D5ED5D0BB35C7E80CE4AE231985DE155 /* Pods-Howdy Imgur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy Imgur.release.xcconfig"; sourceTree = "<group>"; };
+		D966686FEFB333A22CF0DD56732B21F0 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/General/KingfisherManager.swift; sourceTree = "<group>"; };
+		DAFE350C3962FB29FBF5D2C8C646EA76 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
+		E4202778400B13C4CE3EC2C135DB3074 /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Views/Indicator.swift; sourceTree = "<group>"; };
+		E900121B6F40A7D23BC77C410D869EA4 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Sources/Networking/SessionDelegate.swift; sourceTree = "<group>"; };
+		EABE149ABECE039E02E49FF41703DCD6 /* Pods-Howdy ImgurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy ImgurTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDE11CB09542B84B1E501B15601F3817 /* CallbackQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CallbackQueue.swift; path = Sources/Utility/CallbackQueue.swift; sourceTree = "<group>"; };
+		EE3E59F707155D338D38ED0ED97F0DFD /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
+		EF04FA782499D142D75D5AD4269D321F /* Pods-Howdy Imgur-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Howdy Imgur-umbrella.h"; sourceTree = "<group>"; };
+		F1918AEE5700ABE72F430FC9344C9428 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/Image/ImageProcessor.swift; sourceTree = "<group>"; };
+		F1B413BB7551080A5EF58E778A79A2E4 /* SessionDataTask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDataTask.swift; path = Sources/Networking/SessionDataTask.swift; sourceTree = "<group>"; };
+		F22626F2F400D2BB91280CE25D89AD8E /* SizeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeExtensions.swift; path = Sources/Utility/SizeExtensions.swift; sourceTree = "<group>"; };
+		F63A409A2EE7102996AED6B2D435C1D8 /* Pods-Howdy Imgur.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Howdy Imgur.modulemap"; sourceTree = "<group>"; };
+		F9441C4A0EFD9374E8D8B7B39BDC80DD /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Image/Filter.swift; sourceTree = "<group>"; };
+		F9DF125E4E2DECF82B4E3A792E536060 /* ImageDownloaderDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloaderDelegate.swift; path = Sources/Networking/ImageDownloaderDelegate.swift; sourceTree = "<group>"; };
+		F9F15A7404CE5CC6692DB69D3B689D50 /* Pods-Howdy ImgurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Howdy ImgurUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FD67C87E609F7C7D703A74DFB84EDF57 /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Utility/String+MD5.swift"; sourceTree = "<group>"; };
+		FE278EA57CF988119A0B1AF6065F1361 /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/Views/AnimatedImageView.swift; sourceTree = "<group>"; };
+		FFB9F85931696F5AB58B14A7B588E023 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A80DBED678F0694245D5FE2B12A67BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF8C94C3EE0B2E0F5084AF629833D11F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C172E9E182A6EFE7FC1A0576A912B9CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1F247A802B8640F80A3A1BC7F6B49DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14249EE51F2333DCCD45386267EAD213 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3F44C782D64D7EB20B61CE3844EBFAD /* libKingfisher.a */,
+				4A2075556EF54FC726AF648E4FD19EC5 /* libPods-Howdy Imgur.a */,
+				D2AF993324D5D41B5115AFDB64318CF8 /* libPods-Howdy ImgurTests.a */,
+				24555BDF827BDABFA44EDC5EF0213747 /* libPods-Howdy ImgurUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BBAC43FAE94E1510C0578D024FE4AE5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30C5766896FA6CCA0453F0EAE640018E /* Pods-Howdy Imgur */,
+				BAE17B0C30C8C89883413E0A6291933F /* Pods-Howdy ImgurTests */,
+				D3ED9C1B1A00F6D9F2780451AA956780 /* Pods-Howdy ImgurUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2DCC9B793261A80F28135B79C75B4212 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				FE278EA57CF988119A0B1AF6065F1361 /* AnimatedImageView.swift */,
+				40FFC33EFE76DEF204E4A6CB9B156CC8 /* AuthenticationChallengeResponsable.swift */,
+				26FD600056DD6B33641F3F9B74551F72 /* Box.swift */,
+				9B9A255E3A912527104D41DE5844D4EC /* CacheSerializer.swift */,
+				EDE11CB09542B84B1E501B15601F3817 /* CallbackQueue.swift */,
+				2DBEC7C3EA385FE24143DA8BD455AB9E /* Delegate.swift */,
+				6CEEEDDB28E58250E6B0CADABD2EA43C /* Deprecated.swift */,
+				EE3E59F707155D338D38ED0ED97F0DFD /* DiskStorage.swift */,
+				D2691482D7820C5F99CD649A29D5F303 /* ExtensionHelpers.swift */,
+				F9441C4A0EFD9374E8D8B7B39BDC80DD /* Filter.swift */,
+				1FF3B2A4F5C40833F62FCE81C15AFB6C /* FormatIndicatedCacheSerializer.swift */,
+				8400BBD31ED884660FAFB69663DBF0D5 /* GIFAnimatedImage.swift */,
+				CD6B3DEC6D9F6742C7A5C8CAA9497E86 /* Image.swift */,
+				80D5AD4AA7E56B37ADF3B7A3F7585055 /* ImageCache.swift */,
+				396DB3EC8FBCCED38D2AC0B4916CDA32 /* ImageDataProcessor.swift */,
+				BDC355BF1694E4A3830C059BA19DF650 /* ImageDataProvider.swift */,
+				4F5811A013F15B120ED6F90016FC75AE /* ImageDownloader.swift */,
+				F9DF125E4E2DECF82B4E3A792E536060 /* ImageDownloaderDelegate.swift */,
+				28798656D2BA3EED6D4EFD898A82589D /* ImageDrawing.swift */,
+				769CA13540265F3A416EF3989FEC2B0C /* ImageFormat.swift */,
+				A8A512E892C3F64943CC77FDA20F49C2 /* ImageModifier.swift */,
+				3FE699206A662ECE1DA792DA93E9E6A1 /* ImagePrefetcher.swift */,
+				F1918AEE5700ABE72F430FC9344C9428 /* ImageProcessor.swift */,
+				60D4D5878CAC6B95729F921254A98409 /* ImageProgressive.swift */,
+				84E19DA1611D9492ACEAC37112F52B3B /* ImageTransition.swift */,
+				3D2D6ADDA3F232C43C43FF739FB925F4 /* ImageView+Kingfisher.swift */,
+				E4202778400B13C4CE3EC2C135DB3074 /* Indicator.swift */,
+				5E4094828ECE8613D4EC0B1C95CBD49A /* Kingfisher.h */,
+				7F5AFF27FC5FCE0F0001CAC27E8D4A09 /* Kingfisher.swift */,
+				FFB9F85931696F5AB58B14A7B588E023 /* KingfisherError.swift */,
+				D966686FEFB333A22CF0DD56732B21F0 /* KingfisherManager.swift */,
+				AB6F5EB43993649B6204414D225C7F53 /* KingfisherOptionsInfo.swift */,
+				AB39E31F1A055A36E22652B51BCC3894 /* MemoryStorage.swift */,
+				441239658D7D860067EBB50841FD7CDE /* Placeholder.swift */,
+				61F6BB46F7CD9114A423B8D2AE1431F8 /* RedirectHandler.swift */,
+				1B6F3B31C89882DB48175113928698AE /* RequestModifier.swift */,
+				DAFE350C3962FB29FBF5D2C8C646EA76 /* Resource.swift */,
+				D4AE945313899F68D36D0697C8923424 /* Result.swift */,
+				70BB97E7322D0A59679254C66A9B356D /* Runtime.swift */,
+				F1B413BB7551080A5EF58E778A79A2E4 /* SessionDataTask.swift */,
+				E900121B6F40A7D23BC77C410D869EA4 /* SessionDelegate.swift */,
+				F22626F2F400D2BB91280CE25D89AD8E /* SizeExtensions.swift */,
+				B7574B212B1D91F88CBC8C2700B40F3D /* Source.swift */,
+				6A1A23418EEBBACB64B37606061EE50D /* Storage.swift */,
+				FD67C87E609F7C7D703A74DFB84EDF57 /* String+MD5.swift */,
+				C5833CD5FA402117DEA2DFA3A407C775 /* UIButton+Kingfisher.swift */,
+				99486FA3AA6240C2CA0E2EE2480A14A5 /* Support Files */,
+			);
+			name = Kingfisher;
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		30C5766896FA6CCA0453F0EAE640018E /* Pods-Howdy Imgur */ = {
+			isa = PBXGroup;
+			children = (
+				F63A409A2EE7102996AED6B2D435C1D8 /* Pods-Howdy Imgur.modulemap */,
+				556331CC82A72FED0535480058070DDD /* Pods-Howdy Imgur-acknowledgements.markdown */,
+				106A84B4DFCFCB390483AE40499EF598 /* Pods-Howdy Imgur-acknowledgements.plist */,
+				6BAACDF3C01F57E034DDB458D1695C58 /* Pods-Howdy Imgur-dummy.m */,
+				EF04FA782499D142D75D5AD4269D321F /* Pods-Howdy Imgur-umbrella.h */,
+				911B354332BD2DC05AAF1A6405C7F6DE /* Pods-Howdy Imgur.debug.xcconfig */,
+				D5ED5D0BB35C7E80CE4AE231985DE155 /* Pods-Howdy Imgur.release.xcconfig */,
+			);
+			name = "Pods-Howdy Imgur";
+			path = "Target Support Files/Pods-Howdy Imgur";
+			sourceTree = "<group>";
+		};
+		99486FA3AA6240C2CA0E2EE2480A14A5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D795039BBDBF4EC74B3AE8FEE2C9FE1 /* Kingfisher.modulemap */,
+				BF364553B416196EC4FCED3D4C265DEB /* Kingfisher.xcconfig */,
+				6733F43446612BC843E795F148477E9E /* Kingfisher-dummy.m */,
+				70BF96ABB01D7F566A502874D93A0647 /* Kingfisher-prefix.pch */,
+				C2832578BBEFFE4D7890ED4B2258818D /* Kingfisher-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+		BAE17B0C30C8C89883413E0A6291933F /* Pods-Howdy ImgurTests */ = {
+			isa = PBXGroup;
+			children = (
+				7C53AC968F33F697F6A8CD39AF90FFCB /* Pods-Howdy ImgurTests-acknowledgements.markdown */,
+				A5F1B1D79A8AFD0D0DB4E3DA34B4F8C9 /* Pods-Howdy ImgurTests-acknowledgements.plist */,
+				132D5F8B00D4EBE57FC799BE13E29D32 /* Pods-Howdy ImgurTests-dummy.m */,
+				EABE149ABECE039E02E49FF41703DCD6 /* Pods-Howdy ImgurTests.debug.xcconfig */,
+				BE188143AB7DA4034F662D11503D1871 /* Pods-Howdy ImgurTests.release.xcconfig */,
+			);
+			name = "Pods-Howdy ImgurTests";
+			path = "Target Support Files/Pods-Howdy ImgurTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				D92A1AC6AB2D7B5E9CFAF4BAE5B71804 /* Pods */,
+				14249EE51F2333DCCD45386267EAD213 /* Products */,
+				2BBAC43FAE94E1510C0578D024FE4AE5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D3ED9C1B1A00F6D9F2780451AA956780 /* Pods-Howdy ImgurUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2301CA3E0258EBC9465F31A67729D686 /* Pods-Howdy ImgurUITests-acknowledgements.markdown */,
+				0190A16F5D2502D23EE82614D3D7ECC0 /* Pods-Howdy ImgurUITests-acknowledgements.plist */,
+				401654BCE175188EF5CA0EE5412A7AFB /* Pods-Howdy ImgurUITests-dummy.m */,
+				BFC5FBA8539218D4E6509DE4BBD9D2B2 /* Pods-Howdy ImgurUITests.debug.xcconfig */,
+				F9F15A7404CE5CC6692DB69D3B689D50 /* Pods-Howdy ImgurUITests.release.xcconfig */,
+			);
+			name = "Pods-Howdy ImgurUITests";
+			path = "Target Support Files/Pods-Howdy ImgurUITests";
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D92A1AC6AB2D7B5E9CFAF4BAE5B71804 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DCC9B793261A80F28135B79C75B4212 /* Kingfisher */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8615AF28C7965CB9D313EBBA56361399 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB83BBF39119A597747CBD0FFA2F3BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB1C575EFFC8C227D93D83AFB8EEF726 /* Pods-Howdy Imgur-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C81A43C09BFC686D518829204A21B7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA2BC0D77E885DCB4664BBDD70354A2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF1E9224E0B47C93B1F47B33554284F /* Kingfisher-umbrella.h in Headers */,
+				AAC4D0B5BB6162296C44F87B6E217F35 /* Kingfisher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		032A645CF264481A7DC34B823CC9AC1B /* Pods-Howdy ImgurTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E3C9B42897D76B29E7D0197803F6474 /* Build configuration list for PBXNativeTarget "Pods-Howdy ImgurTests" */;
+			buildPhases = (
+				8615AF28C7965CB9D313EBBA56361399 /* Headers */,
+				35E2149ECFDBA05D3E49C999F58D3C12 /* Sources */,
+				D1F247A802B8640F80A3A1BC7F6B49DB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC15838C94277E3EB16A4E65CC5C3075 /* PBXTargetDependency */,
+			);
+			name = "Pods-Howdy ImgurTests";
+			productName = "Pods-Howdy ImgurTests";
+			productReference = D2AF993324D5D41B5115AFDB64318CF8 /* libPods-Howdy ImgurTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		495A10CAC0D0A9C720C92EB0EC3A9AC4 /* Pods-Howdy ImgurUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8321D628CBB485E66A5BAF166009C277 /* Build configuration list for PBXNativeTarget "Pods-Howdy ImgurUITests" */;
+			buildPhases = (
+				9C81A43C09BFC686D518829204A21B7B /* Headers */,
+				47ADB2424256EC1425817AC7DF498207 /* Sources */,
+				C172E9E182A6EFE7FC1A0576A912B9CC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E95ED246AA07F8CEF92B3B94C657B13E /* PBXTargetDependency */,
+			);
+			name = "Pods-Howdy ImgurUITests";
+			productName = "Pods-Howdy ImgurUITests";
+			productReference = 24555BDF827BDABFA44EDC5EF0213747 /* libPods-Howdy ImgurUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7AEAED1717C169008B50310B03BC351C /* Pods-Howdy Imgur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBE63B16FF7E2B12226B6A23F483A8AD /* Build configuration list for PBXNativeTarget "Pods-Howdy Imgur" */;
+			buildPhases = (
+				9AB83BBF39119A597747CBD0FFA2F3BE /* Headers */,
+				121DC9009B215F8C5D7A55B58BECABAE /* Sources */,
+				AF8C94C3EE0B2E0F5084AF629833D11F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				049E50361EBC1931C08D17F186E079E4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Howdy Imgur";
+			productName = "Pods-Howdy Imgur";
+			productReference = 4A2075556EF54FC726AF648E4FD19EC5 /* libPods-Howdy Imgur.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C481E8A10E17B8332280003F316574B9 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				CA2BC0D77E885DCB4664BBDD70354A2D /* Headers */,
+				15D0C114AE66BFE0225956F142D25BDD /* Sources */,
+				A80DBED678F0694245D5FE2B12A67BAF /* Frameworks */,
+				2A9A5C39EF85F9ED55DEF7AAD3C5EA4A /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* libKingfisher.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 14249EE51F2333DCCD45386267EAD213 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
+				7AEAED1717C169008B50310B03BC351C /* Pods-Howdy Imgur */,
+				032A645CF264481A7DC34B823CC9AC1B /* Pods-Howdy ImgurTests */,
+				495A10CAC0D0A9C720C92EB0EC3A9AC4 /* Pods-Howdy ImgurUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A9A5C39EF85F9ED55DEF7AAD3C5EA4A /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Kingfisher/Kingfisher.modulemap",
+				"${PODS_ROOT}/Headers/Public/Kingfisher/Kingfisher-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kingfisher/Kingfisher.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Kingfisher/Kingfisher-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		121DC9009B215F8C5D7A55B58BECABAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				965B53FECEAFD8A8A4B64C452AE1775F /* Pods-Howdy Imgur-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15D0C114AE66BFE0225956F142D25BDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B203EA353AC06C9B638F51055AF18338 /* AnimatedImageView.swift in Sources */,
+				6B447BED1E178340EB757AD2ED691C8F /* AuthenticationChallengeResponsable.swift in Sources */,
+				9179F239B172AD193547056468968B5A /* Box.swift in Sources */,
+				C0EB3AE35EB79BE7B1D2D1023747410B /* CacheSerializer.swift in Sources */,
+				93B769C2E67F30D1368F1A25C18822AA /* CallbackQueue.swift in Sources */,
+				145231BF10228179CC1251430B5B5A50 /* Delegate.swift in Sources */,
+				E43D95E5D42D7BEEF2E30BC092D27155 /* Deprecated.swift in Sources */,
+				69EDF0C27A10967B0AD718D445D8BA0E /* DiskStorage.swift in Sources */,
+				142387328A19D0E43467AF35355D5A24 /* ExtensionHelpers.swift in Sources */,
+				9AA29A5E8B001A04E905A5991E1E8B0E /* Filter.swift in Sources */,
+				24409906BC63C11C5E1DF68AB3A05F55 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				3A339A4C67379EAC42E9DA1B5FD63118 /* GIFAnimatedImage.swift in Sources */,
+				A27CF9E2F587DFE1AF511A82F1962B70 /* Image.swift in Sources */,
+				27F4F95ED0E40D5530879A7CA74D03FA /* ImageCache.swift in Sources */,
+				B838687761762EE9AC6E8A3B1B9C101D /* ImageDataProcessor.swift in Sources */,
+				35D40139B46B749607D0DBD3F9EF7DFA /* ImageDataProvider.swift in Sources */,
+				9A4D229ACB875515D1715F217B57A992 /* ImageDownloader.swift in Sources */,
+				A0759B8FD90F373E1ED0AF2F02E0A4D8 /* ImageDownloaderDelegate.swift in Sources */,
+				B0961FDF6538684FBC93BCEA50A7ECF7 /* ImageDrawing.swift in Sources */,
+				094FDBAAB4E9387C7A44F5C242B6934C /* ImageFormat.swift in Sources */,
+				D58C16526B6B5CF279A4D8D1AAB1F332 /* ImageModifier.swift in Sources */,
+				CC9A554D6A41E73CEB8C43665C942B1F /* ImagePrefetcher.swift in Sources */,
+				D0A77243594284D52A385F8FAD0F49CF /* ImageProcessor.swift in Sources */,
+				6BDF3E2B3B8B1B588AFCC89E5F610D54 /* ImageProgressive.swift in Sources */,
+				2922E77E83A4412E9C261F6E9F77A787 /* ImageTransition.swift in Sources */,
+				7339CDB33F6500F8198C04ED0AC6143E /* ImageView+Kingfisher.swift in Sources */,
+				740C9657F052684A138B6EF0D4460E89 /* Indicator.swift in Sources */,
+				585AFA9880BC451073568F0330B4A270 /* Kingfisher-dummy.m in Sources */,
+				177326C2DF918217BEE5DDD718CAD768 /* Kingfisher.swift in Sources */,
+				BA7B3EC1B46849A60308AB25E58FD42F /* KingfisherError.swift in Sources */,
+				454DB9769435D77E3666B9243E8CE5F2 /* KingfisherManager.swift in Sources */,
+				69561764CB9FF92B173CACDC80372BAB /* KingfisherOptionsInfo.swift in Sources */,
+				748B687B1A1EA348713FB9B71FDD4959 /* MemoryStorage.swift in Sources */,
+				E3F2D6217B8C2FAB2EAA3C90EF7618E8 /* Placeholder.swift in Sources */,
+				56C3E34CAE2342CD459B4DCDD9F0E7C1 /* RedirectHandler.swift in Sources */,
+				5823FBFA59EC6E78CE400DBB25F6A54B /* RequestModifier.swift in Sources */,
+				8E3B6E3A6FFCEC942B78F8A5D16801D2 /* Resource.swift in Sources */,
+				3B2EC619FFE55B4C1F6C182F7C1A4227 /* Result.swift in Sources */,
+				8029A16AF92BEAF4C3DDD8417EDB4988 /* Runtime.swift in Sources */,
+				FD0390176B2CD6CBE039D06EA2261F41 /* SessionDataTask.swift in Sources */,
+				8D10D1134E426A6013108D3219ACD78A /* SessionDelegate.swift in Sources */,
+				DF919B6B71CB47CF48D97E6EB1222792 /* SizeExtensions.swift in Sources */,
+				822E07B25D0F05B83DED09DD093E81EA /* Source.swift in Sources */,
+				7D63207AEA90325025CB63738EFF7C4E /* Storage.swift in Sources */,
+				A0D1DC49E98D4DE5AB0DCE11742C1732 /* String+MD5.swift in Sources */,
+				D4F5CAA40A4D15B48EB0316FD5E1206E /* UIButton+Kingfisher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35E2149ECFDBA05D3E49C999F58D3C12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F2496AFE78F200BD3DBC59EF3EDB01 /* Pods-Howdy ImgurTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47ADB2424256EC1425817AC7DF498207 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE33921A8929E8246BD256FA41E1815 /* Pods-Howdy ImgurUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		049E50361EBC1931C08D17F186E079E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = BCE6B80F3DBEB67290D11BB09C6B47C3 /* PBXContainerItemProxy */;
+		};
+		DC15838C94277E3EB16A4E65CC5C3075 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Howdy Imgur";
+			target = 7AEAED1717C169008B50310B03BC351C /* Pods-Howdy Imgur */;
+			targetProxy = 3AE0BF5746DBAD84D2B7EE37173A0F53 /* PBXContainerItemProxy */;
+		};
+		E95ED246AA07F8CEF92B3B94C657B13E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Howdy Imgur";
+			target = 7AEAED1717C169008B50310B03BC351C /* Pods-Howdy Imgur */;
+			targetProxy = ADF9D070BA33354056162C9D5E2F46DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A3302C8E0F4F8C240B80065B6A67421 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EABE149ABECE039E02E49FF41703DCD6 /* Pods-Howdy ImgurTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18E8CBD7AC33D17AE3D9D354854E24C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF364553B416196EC4FCED3D4C265DEB /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Kingfisher/Kingfisher.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		64BCFAA6C9F380D1742BA170049EFCCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9F15A7404CE5CC6692DB69D3B689D50 /* Pods-Howdy ImgurUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		807704AD4994508AF8CD212D778C42E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF364553B416196EC4FCED3D4C265DEB /* Kingfisher.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Kingfisher/Kingfisher.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A27713CB74E99AF202AADC23200A32F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A7D2B9084B20F331EE491BF944840F62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFC5FBA8539218D4E6509DE4BBD9D2B2 /* Pods-Howdy ImgurUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A9BDF801E2808A401BF1992F975EA58B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE188143AB7DA4034F662D11503D1871 /* Pods-Howdy ImgurTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF0B0F350EDA3DAC4FCC383D67DEF21E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5ED5D0BB35C7E80CE4AE231985DE155 /* Pods-Howdy Imgur.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Howdy Imgur/Pods-Howdy Imgur.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F94784B93CC59D1ACAA9882182558C6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 911B354332BD2DC05AAF1A6405C7F6DE /* Pods-Howdy Imgur.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Howdy Imgur/Pods-Howdy Imgur.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E3C9B42897D76B29E7D0197803F6474 /* Build configuration list for PBXNativeTarget "Pods-Howdy ImgurTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A3302C8E0F4F8C240B80065B6A67421 /* Debug */,
+				A9BDF801E2808A401BF1992F975EA58B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6410F571BA8C1AEC6A19403F1B61B0B5 /* Debug */,
+				A27713CB74E99AF202AADC23200A32F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8321D628CBB485E66A5BAF166009C277 /* Build configuration list for PBXNativeTarget "Pods-Howdy ImgurUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7D2B9084B20F331EE491BF944840F62 /* Debug */,
+				64BCFAA6C9F380D1742BA170049EFCCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C481E8A10E17B8332280003F316574B9 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				807704AD4994508AF8CD212D778C42E0 /* Debug */,
+				18E8CBD7AC33D17AE3D9D354854E24C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBE63B16FF7E2B12226B6A23F483A8AD /* Build configuration list for PBXNativeTarget "Pods-Howdy Imgur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F94784B93CC59D1ACAA9882182558C6B /* Debug */,
+				EF0B0F350EDA3DAC4FCC383D67DEF21E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

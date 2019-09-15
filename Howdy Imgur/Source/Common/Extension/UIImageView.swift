@@ -28,9 +28,15 @@ extension UIImageView {
             result in
             switch result {
             case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                if logActivity {
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                    
+                }
             case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
+                if logActivity {
+                    print("Job failed: \(error.localizedDescription)")
+                    
+                }
                 
             }
             

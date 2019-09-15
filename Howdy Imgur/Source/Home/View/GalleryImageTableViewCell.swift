@@ -30,13 +30,16 @@ class GalleryImageTableViewCell: UITableViewCell {
                 
             }
             // Set image
-            let imageType = data?.images?[0].type
-            if (imageType == "image/jpeg") || (imageType == "image/png") {
-                let imageURL = URL(string: (data?.images?[0].link)!)
-                galleryImageView?.loadImageFrom(imageURL!)
-                
-            } else {
-                galleryImageView.image = #imageLiteral(resourceName: "no_image")
+            if let imageType = data?.images?[0].type {
+                if !(imageType == "video/mp4") {
+                    let imageURL = URL(string: (data?.images?[0].link)!)
+                    galleryImageView?.loadImageFrom(imageURL!)
+                    
+                }
+                else {
+                    galleryImageView.image = #imageLiteral(resourceName: "no_image")
+                    
+                }
                 
             }
             

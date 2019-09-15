@@ -19,8 +19,8 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
     /*
      Fetch all images
      **/
-    func fetchImageList() {
-        apiManager.fetchDataforInputText(queryParameter: "dog") { (response) in
+    func fetchImageList(searchKey: String) {
+        apiManager.fetchDataforInputText(queryParameter: searchKey) { (response) in
             switch(response) {
                 
             case let .failure(error) :

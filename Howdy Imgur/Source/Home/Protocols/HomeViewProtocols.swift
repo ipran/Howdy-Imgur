@@ -21,12 +21,13 @@ protocol HomeViewPresenterProtocol: class {
     var view: HomeViewProtocol? { get set }
     var router: HomeViewRouterProtocol? { get set }
     func viewDidLoad()
+    func fetchImageList(with searchKey: String)
     
 }
 
 protocol HomeViewInputInteractorProtocol: class {
     // Presenter -> Interactor
-    func fetchImageList()
+    func fetchImageList(searchKey: String)
     var presenter: HomeViewOutputInteractorProtocol? { get set }
     
 }

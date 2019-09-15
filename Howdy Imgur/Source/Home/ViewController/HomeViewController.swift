@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
     // MARK: - Outlets
     @IBOutlet weak var segmentControlContainer: ShadowView!
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
@@ -16,9 +17,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var noResponseLabel: UILabel!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var appInfoLabel: UILabel!
+    @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var segmentControlViewHeightConstraint: NSLayoutConstraint!
-    
-    
     // Delclarations
     var presenter: HomeViewPresenterProtocol?
     var gallery: Gallery?
@@ -35,7 +35,6 @@ class HomeViewController: UIViewController {
         
         HomeViewRouter.createHomeViewModule(homeViewRef: self)
         initialSetup()
-        activityIndicatorView.startAnimating()
         presenter?.viewDidLoad()
         
     }
@@ -45,9 +44,9 @@ class HomeViewController: UIViewController {
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
     func showImageList(with gallery: Gallery) {
-        self.noResponseLabel.isHidden = true
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
+        updateUIControls()
         self.tableView.reloadData()
         
     }
@@ -55,6 +54,23 @@ extension HomeViewController: HomeViewProtocol {
         self.noResponseLabel.isHidden = false
         self.noResponseLabel.text = message
         self.activityIndicatorView.stopAnimating()
+        
+    }
+    func updateUIControls() {
+        if let cellCount = gallery?.data?.count {
+            if cellCount == 0 {
+                noResponseLabel.isHidden = false
+                noResponseLabel.text = "Sorry, we did not find any results for your search."
+                appInfoLabel.text = "Search for the top images of the week from the imgur gallery."
+                
+            }
+            else {
+                noResponseLabel.isHidden = true
+                appInfoLabel.text = "Switch to 'Less' for displaying results fewer in number."
+                
+            }
+            
+        }
         
     }
     
@@ -80,7 +96,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
         return 400
         
     }
-
+    
 }
 
 // MARK: - Utility Functions
@@ -89,18 +105,15 @@ extension HomeViewController {
      Doing the initial setup for the controller
      */
     func initialSetup() {
+        // Seup SearchField
+        searchField.returnKeyType = .search
         // Setup Segment Control
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
         toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
         
-        setupViews()
-        
-    }
-    func setupViews() {
         // Don't show segment control initially
-//        segmentControlViewHeightConstraint.constant = 0
-        
+        //        segmentControlViewHeightConstraint.constant = 0
     }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
@@ -125,6 +138,19 @@ extension HomeViewController {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+    }
+    
+}
+
+// MARK: - Textfield Delegate
+extension HomeViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Handle control to presenter on text field return
+        activityIndicatorView.startAnimating()
+        presenter?.fetchImageList(with: textField.text!)
+        textField.resignFirstResponder()
+        return true
+        
     }
     
 }

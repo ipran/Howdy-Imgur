@@ -14,11 +14,17 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
     var router: HomeViewRouterProtocol?
     
     func viewDidLoad() {
-        interactor?.fetchImageList()
+        
     }
-    /*
+    /**
+    This will get called when user searches for images with a key
+    */
+    func fetchImageList(with searchKey: String) {
+        interactor?.fetchImageList(searchKey: searchKey)
+    }
+    /**
      Fetch image list success call back
-     **/
+     */
     func imageListDidFetch(gallery: Gallery?) {
         if let gallery = gallery {
             self.view?.showImageList(with: gallery)
@@ -29,9 +35,9 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
         }
         
     }
-    /*
+    /**
      Fetch image list failed call back
-     **/
+     */
     func imageListDidFetchFailed(error: Error?) {
         self.view?.showAPIError(message: error?.localizedDescription ?? ImgurMessages.somethingWentWrong)
         

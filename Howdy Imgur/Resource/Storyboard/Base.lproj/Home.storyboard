@@ -20,6 +20,9 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home View Controller-->
@@ -49,6 +52,9 @@
                                                                 <color key="value" red="0.56862745098039214" green="0.56862745098039214" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xFh-ic-VxI"/>
+                                                        </connections>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-j7-CPa">
                                                         <rect key="frame" x="8" y="11" width="14" height="14"/>
@@ -307,7 +313,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgS-BK-sq1">
                                 <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -337,6 +343,7 @@
                         <outlet property="activityIndicatorView" destination="OjA-qy-skk" id="uAj-Li-ZDZ"/>
                         <outlet property="appInfoLabel" destination="Pp1-BN-0P7" id="EEW-TG-iFW"/>
                         <outlet property="noResponseLabel" destination="XgS-BK-sq1" id="4ft-bG-PSX"/>
+                        <outlet property="searchField" destination="970-Ip-fi0" id="fAa-5j-eQu"/>
                         <outlet property="segmentControlContainer" destination="ApE-0u-HlX" id="Xi0-2D-RtX"/>
                         <outlet property="segmentControlViewHeightConstraint" destination="FsD-pr-bzO" id="wLl-b4-GBL"/>
                         <outlet property="tableView" destination="7jM-Xb-2tu" id="YEF-hJ-RS5"/>

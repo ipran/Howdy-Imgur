@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
     // MARK: - Outlets
@@ -81,8 +82,32 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
         }
         let imageType = data.images?[0].type
         if (imageType == "image/jpeg") || (imageType == "image/png") {
-            let imageURL = data.images?[0].link
-            cell.imageView?.cacheImage(urlString: imageURL ?? "")
+            let imageURL = URL(string: (data.images?[0].link)!)
+//            cell.imageView?.kf.setImage(with: imageURL)
+            
+            
+            let processor = DownsamplingImageProcessor(size: (cell.imageView?.bounds.size)!)
+                >> RoundCornerImageProcessor(cornerRadius: 6)
+            cell.imageView!.kf.indicatorType = .activity
+            cell.imageView!.kf.setImage(
+                with: imageURL,
+                placeholder: UIImage(named: "placeholder"),
+                options: [
+                    .processor(processor),
+                    .scaleFactor(UIScreen.main.scale),
+                    .transition(.fade(1)),
+                    .cacheOriginalImage
+                ])
+            {
+                result in
+                switch result {
+                case .success(let value):
+                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                case .failure(let error):
+                    print("Job failed: \(error.localizedDescription)")
+                }
+            }
+            
             
         }
         return cell

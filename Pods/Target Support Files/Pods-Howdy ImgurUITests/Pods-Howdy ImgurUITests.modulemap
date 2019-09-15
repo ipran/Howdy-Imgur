@@ -1,0 +1,6 @@
+framework module Pods_Howdy_ImgurUITests {
+  umbrella header "Pods-Howdy ImgurUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentControlViewHeightConstraint: NSLayoutConstraint!
     // Delclarations
     var presenter: HomeViewPresenterProtocol?
-    var gallery: Gallery?
+    var gallery: ImgurGallery?
     
     /**
      Instantiate a controller
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
 
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
-    func showImageList(with gallery: Gallery) {
+    func showImageList(with gallery: ImgurGallery) {
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
         updateUIControls()

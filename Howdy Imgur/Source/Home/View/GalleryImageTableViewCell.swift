@@ -16,7 +16,7 @@ class GalleryImageTableViewCell: UITableViewCell {
     @IBOutlet weak var galleryImageView: UIImageView!
     @IBOutlet weak var imageCountLabel: UILabel!
     // Declarations
-    var data: Datum? {
+    var data: Gallery? {
         didSet {
             // Set title label
             titleLabel.text = data?.title

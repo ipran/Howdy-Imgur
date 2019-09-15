@@ -32,7 +32,7 @@ class APITests: XCTestCase {
 }
 
 extension APITests: HomeViewOutputInteractorProtocol {
-    func imageListDidFetch(gallery: Gallery?) {
+    func imageListDidFetch(gallery: ImgurGallery?) {
         // Testing whether API is giving data
         XCTAssert(((gallery?.data) != nil), "Home API failed")
         guard let data = gallery?.data else {

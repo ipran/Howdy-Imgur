@@ -9,9 +9,9 @@
 import Foundation
 
 // MARK: - Gallery
-struct Gallery : Codable {
+struct ImgurGallery : Codable {
     init() {}
-    var data : [Datum]?
+    var data : [Gallery]?
     var success : Bool?
     var status : Int?
     
@@ -23,7 +23,7 @@ struct Gallery : Codable {
     }
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        data = try values.decodeIfPresent([Datum].self, forKey: .data)
+        data = try values.decodeIfPresent([Gallery].self, forKey: .data)
         success = try values.decodeIfPresent(Bool.self, forKey: .success)
         status = try values.decodeIfPresent(Int.self, forKey: .status)
         
@@ -31,7 +31,7 @@ struct Gallery : Codable {
     
 }
 // MARK: - Data
-struct Datum : Codable {
+struct Gallery : Codable {
     let id : String?
     let title : String?
     let description : String?

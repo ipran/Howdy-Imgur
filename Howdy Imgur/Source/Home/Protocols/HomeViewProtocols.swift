@@ -10,7 +10,7 @@ import UIKit
 
 protocol HomeViewProtocol: class {
     // Presenter -> View
-    func showImageList(with gallery: Gallery)
+    func showImageList(with gallery: ImgurGallery)
     func showAPIError(message: String)
     
 }
@@ -22,21 +22,21 @@ protocol HomeViewPresenterProtocol: class {
     var router: HomeViewRouterProtocol? { get set }
     func viewDidLoad()
     func fetchImageList(with searchKey: String)
-    func sortGalleryListForLessResult(with gallery: Gallery)
+    func sortGalleryListForLessResult(with gallery: ImgurGallery)
     
 }
 
 protocol HomeViewInputInteractorProtocol: class {
     // Presenter -> Interactor
     func fetchImageList(searchKey: String)
-    func sortGalleryListForLessResult(gallery: Gallery)
+    func sortGalleryListForLessResult(gallery: ImgurGallery)
     var presenter: HomeViewOutputInteractorProtocol? { get set }
     
 }
 
 protocol HomeViewOutputInteractorProtocol: class {
     // Interactor -> Presenter
-    func imageListDidFetch(gallery: Gallery?)
+    func imageListDidFetch(gallery: ImgurGallery?)
     func imageListDidFetchFailed(error: Error?)
     
 }

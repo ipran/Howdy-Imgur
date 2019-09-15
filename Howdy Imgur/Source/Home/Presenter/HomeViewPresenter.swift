@@ -26,14 +26,14 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
     /**
      This will get called when user swtiches from All to Less
      */
-    func sortGalleryListForLessResult(with gallery: Gallery) {
+    func sortGalleryListForLessResult(with gallery: ImgurGallery) {
         interactor?.sortGalleryListForLessResult(gallery: gallery)
         
     }
     /**
      Fetch image list success call back
      */
-    func imageListDidFetch(gallery: Gallery?) {
+    func imageListDidFetch(gallery: ImgurGallery?) {
         if let gallery = gallery {
             self.view?.showImageList(with: gallery)
             

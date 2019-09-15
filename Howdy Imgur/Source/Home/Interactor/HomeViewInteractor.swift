@@ -28,11 +28,11 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
             case let .success(gallery) :
                 // Reverse chronological order
                 let dataArray = gallery.data
-                var reversedDataArray = [Datum]()
+                var reversedDataArray = [Gallery]()
                 for item in (dataArray?.reversed())! {
                     reversedDataArray.append(item)
                 }
-                var reversedGallery = Gallery()
+                var reversedGallery = ImgurGallery()
                 reversedGallery.status = 200
                 reversedGallery.success = true
                 reversedGallery.data = reversedDataArray
@@ -46,10 +46,10 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
     /*
     Sort Gallery for less results
     **/
-    func sortGalleryListForLessResult(gallery: Gallery) {
+    func sortGalleryListForLessResult(gallery: ImgurGallery) {
         // Filter array based on checking 'points','score' and 'topic_id' add up to an even no
         let data = gallery.data?.filter { ($0.points! + $0.score! + $0.topic_id!) % 2 == 0 }
-        var filteredGallery = Gallery()
+        var filteredGallery = ImgurGallery()
         filteredGallery.status = 200
         filteredGallery.success = true
         filteredGallery.data = data

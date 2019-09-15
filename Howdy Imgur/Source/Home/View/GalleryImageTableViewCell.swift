@@ -15,6 +15,8 @@ class GalleryImageTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var galleryImageView: UIImageView!
     @IBOutlet weak var imageCountLabel: UILabel!
+    @IBOutlet weak var imageCountHolderView: ShadowView!
+    
     // Declarations
     var data: Gallery? {
         didSet {
@@ -26,7 +28,11 @@ class GalleryImageTableViewCell: UITableViewCell {
             // Set image count label
             let imageCount = data?.images?.count ?? Int(truncating: 0 as NSNumber)
             if imageCount > 1 {
+                imageCountHolderView.isHidden = false
                 imageCountLabel.text = "\(imageCount - 1) more"
+                
+            } else {
+                imageCountHolderView.isHidden = true
                 
             }
             // Set image

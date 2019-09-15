@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentControlViewHeightConstraint: NSLayoutConstraint!
     // Delclarations
     var presenter: HomeViewPresenterProtocol?
-    var gallery: Gallery?
+    var gallery: [Gallery]?
     
     /**
      Instantiate a controller
@@ -43,7 +43,8 @@ class HomeViewController: UIViewController {
 
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
-    func showImageList(with gallery: Gallery) {
+    func showImageList(with gallery: [Gallery]) {
+        showSegmentControl()
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
         updateUIControls()
@@ -62,12 +63,12 @@ extension HomeViewController: HomeViewProtocol {
 // MARK: - Tableview Delegate & Datasource
 extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gallery?.data?.count ?? 0
+        return gallery?.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GalleryImageTableViewCell.identifier) as! GalleryImageTableViewCell
-        guard let data = gallery?.data?[indexPath.row] else {
+        guard let data = gallery?[indexPath.row] else {
             return cell
         }
         cell.selectionStyle = .none
@@ -88,15 +89,14 @@ extension HomeViewController {
      Doing the initial setup for the controller
      */
     func initialSetup() {
-        // Setting accessibility id for UI Testing
-        tableView.accessibilityIdentifier = ImgurAccessibilityIdentifier.homeTableView
-        toggleSegmentControl.accessibilityIdentifier = ImgurAccessibilityIdentifier.toggleSwitch
         // Seup SearchField
         searchField.returnKeyType = .search
         // Setup Segment Control
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
         toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
+        // Hide SegmentControl
+        hideSegmentControl()
         
     }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
@@ -127,23 +127,33 @@ extension HomeViewController {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+        
     }
     func updateUIControls() {
-        if let cellCount = gallery?.data?.count {
+        if let cellCount = gallery?.count {
             if cellCount == 0 {
                 noResponseLabel.isHidden = false
                 noResponseLabel.text = "Sorry, we did not find any results for your search."
                 appInfoLabel.text = "Search for the top images of the week from the imgur gallery."
+                hideSegmentControl()
                 
             }
             else {
                 noResponseLabel.isHidden = true
                 appInfoLabel.text = "Switch to 'Less' for displaying results fewer in number."
+                showSegmentControl()
                 
             }
             
         }
         
+    }
+    func showSegmentControl() {
+        segmentControlViewHeightConstraint.constant = 56
+        
+    }
+    func hideSegmentControl() {
+        segmentControlViewHeightConstraint.constant = 0
     }
     
 }
@@ -151,6 +161,10 @@ extension HomeViewController {
 // MARK: - Textfield Delegate
 extension HomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Move segment control on All
+        toggleSegmentControl.selectedSegmentIndex = 0
+        // Scroll tableview to top
+        tableView.setContentOffset(.zero, animated: true)
         // Handle control to presenter on text field return
         activityIndicatorView.startAnimating()
         presenter?.fetchImageList(with: textField.text!)

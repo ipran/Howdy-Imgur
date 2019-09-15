@@ -9,12 +9,13 @@
 import UIKit
 
 class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProtocol {
+    // Delcarations
     var interactor: HomeViewInputInteractorProtocol?
     var view: HomeViewProtocol?
     var router: HomeViewRouterProtocol?
     
     func viewDidLoad() {
-        
+        // No inital data fetching
     }
     /**
      This will get called when user searches for images with a key
@@ -26,16 +27,16 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
     /**
      This will get called when user swtiches from All to Less
      */
-    func sortGalleryListForLessResult(with gallery: Gallery) {
+    func sortGalleryListForLessResult(with gallery: [Gallery]) {
         interactor?.sortGalleryListForLessResult(gallery: gallery)
         
     }
     /**
      Fetch image list success call back
      */
-    func imageListDidFetch(gallery: Gallery?) {
-        if let gallery = gallery {
-            self.view?.showImageList(with: gallery)
+    func imageListDidFetch(gallery: [Gallery]?) {
+        if let galleryArray = gallery {
+            self.view?.showImageList(with: galleryArray)
             
         } else {
             self.view?.showAPIError(message: ImgurMessages.noImagesFound)

@@ -22,7 +22,7 @@
 		3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE6E232BBB40003F2414 /* APIResponse.swift */; };
 		3D11FE72232BBC4A003F2414 /* BaseAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */; };
 		3D11FE74232BCAB2003F2414 /* ImgurAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */; };
-		3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* Gallery.swift */; };
+		3D11FE78232BCDD5003F2414 /* ImgurGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */; };
 		3D11FE7A232BE5C2003F2414 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE79232BE5C2003F2414 /* Image.swift */; };
 		3D11FE7C232BE6B1003F2414 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE7B232BE6B1003F2414 /* Tags.swift */; };
 		3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE82232C108A003F2414 /* HomeViewController.swift */; };
@@ -40,6 +40,7 @@
 		3D11FEA7232D0905003F2414 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEA6232D0905003F2414 /* UITableViewCell.swift */; };
 		3D11FEAD232DE1E4003F2414 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEAC232DE1E4003F2414 /* Double.swift */; };
 		3D11FEB4232E5116003F2414 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB3232E5116003F2414 /* APITests.swift */; };
+		3D11FEB8232E6A31003F2414 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB7232E6A31003F2414 /* UIImageView.swift */; };
 		952149A0E901EBF1890328D1 /* libPods-Howdy ImgurTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95941CC58F2B8A8A3F42980A /* libPods-Howdy ImgurTests.a */; };
 		E8812F9183B7D492646EE521 /* libPods-Howdy Imgur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */; };
 /* End PBXBuildFile section */
@@ -82,7 +83,7 @@
 		3D11FE6E232BBB40003F2414 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		3D11FE71232BBC4A003F2414 /* BaseAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIManager.swift; sourceTree = "<group>"; };
 		3D11FE73232BCAB2003F2414 /* ImgurAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPIManager.swift; sourceTree = "<group>"; };
-		3D11FE77232BCDD5003F2414 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGallery.swift; sourceTree = "<group>"; };
 		3D11FE79232BE5C2003F2414 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3D11FE7B232BE6B1003F2414 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		3D11FE82232C108A003F2414 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +101,7 @@
 		3D11FEA6232D0905003F2414 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
 		3D11FEAC232DE1E4003F2414 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		3D11FEB3232E5116003F2414 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		3D11FEB7232E6A31003F2414 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howdy Imgur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5931524E63D0CEABD4D6C0DE /* Pods-Howdy ImgurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurTests.debug.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurTests/Pods-Howdy ImgurTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C8B85EB127B5DC2ECDEC00 /* Pods-Howdy ImgurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurUITests.release.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurUITests/Pods-Howdy ImgurUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -294,7 +296,6 @@
 		3D11FE65232B9CA8003F2414 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE85232C18E7003F2414 /* Utils */,
 				3D11FE84232C18E0003F2414 /* View */,
 				3D11FE69232BA11F003F2414 /* Constants */,
 				3D11FE66232B9D42003F2414 /* Extension */,
@@ -312,6 +313,7 @@
 				3D11FE91232CC520003F2414 /* UIViewController.swift */,
 				3D11FEA6232D0905003F2414 /* UITableViewCell.swift */,
 				3D11FEAC232DE1E4003F2414 /* Double.swift */,
+				3D11FEB7232E6A31003F2414 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -336,7 +338,7 @@
 		3D11FE75232BCD82003F2414 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE77232BCDD5003F2414 /* Gallery.swift */,
+				3D11FE77232BCDD5003F2414 /* ImgurGallery.swift */,
 				3D11FE79232BE5C2003F2414 /* Image.swift */,
 				3D11FE7B232BE6B1003F2414 /* Tags.swift */,
 			);
@@ -357,13 +359,6 @@
 				3D11FE86232C1962003F2414 /* ShadowView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3D11FE85232C18E7003F2414 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		3D11FE8A232C21D0003F2414 /* Font */ = {
@@ -659,7 +654,8 @@
 				3D11FE90232CC0D6003F2414 /* UIStoryboard.swift in Sources */,
 				3D11FE83232C108A003F2414 /* HomeViewController.swift in Sources */,
 				3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */,
-				3D11FE78232BCDD5003F2414 /* Gallery.swift in Sources */,
+				3D11FE78232BCDD5003F2414 /* ImgurGallery.swift in Sources */,
+				3D11FEB8232E6A31003F2414 /* UIImageView.swift in Sources */,
 				3D11FE68232B9D67003F2414 /* URLRequest.swift in Sources */,
 				3D11FE87232C1962003F2414 /* ShadowView.swift in Sources */,
 				3D11FE6F232BBB40003F2414 /* APIResponse.swift in Sources */,

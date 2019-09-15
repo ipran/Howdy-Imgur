@@ -205,7 +205,6 @@
                                     <constraint firstAttribute="trailing" secondItem="iQQ-FT-qoL" secondAttribute="trailing" id="FuK-gC-Q1B"/>
                                     <constraint firstAttribute="trailing" secondItem="tHb-dD-GpE" secondAttribute="trailing" id="HGg-y7-S5D"/>
                                     <constraint firstItem="tHb-dD-GpE" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="top" id="K2r-GY-8fW"/>
-                                    <constraint firstItem="WfJ-FL-ruu" firstAttribute="top" secondItem="SNx-59-GVj" secondAttribute="top" constant="112" id="Rd5-og-bgj"/>
                                     <constraint firstItem="iQQ-FT-qoL" firstAttribute="top" secondItem="tHb-dD-GpE" secondAttribute="bottom" id="bkl-I7-Ejb"/>
                                     <constraint firstItem="tHb-dD-GpE" firstAttribute="leading" secondItem="SNx-59-GVj" secondAttribute="leading" id="eCe-sZ-TYH"/>
                                     <constraint firstAttribute="height" constant="168" id="fWR-mM-mpw"/>
@@ -249,19 +248,38 @@
                                                                         <constraint firstAttribute="height" constant="302" id="gsw-Ph-XYo"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
-                                                                    <rect key="frame" x="199" y="376" width="0.0" height="0.0"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-8r-D0F" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
+                                                                    <rect key="frame" x="174" y="344" width="50" height="20"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
+                                                                            <rect key="frame" x="25" y="1" width="0.0" height="0.0"/>
+                                                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" name="Imgur_BlueColor"/>
-                                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="50" id="Amf-y3-jto"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="J0L-Jm-4My"/>
+                                                                        <constraint firstItem="tAa-9y-E0h" firstAttribute="top" secondItem="Xet-8r-D0F" secondAttribute="top" constant="1" id="L7e-R4-vi3"/>
+                                                                        <constraint firstItem="tAa-9y-E0h" firstAttribute="centerX" secondItem="Xet-8r-D0F" secondAttribute="centerX" id="Ynt-xS-PUb"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="5"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="0.0"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
                                                             </subviews>
                                                             <color key="backgroundColor" name="Imgur_BackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstItem="tAa-9y-E0h" firstAttribute="centerX" secondItem="Pct-Ic-Cej" secondAttribute="centerX" id="2t4-PN-TsE"/>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="top" secondItem="Pct-Ic-Cej" secondAttribute="top" constant="16" id="71c-g7-AT7"/>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="9AN-9x-gnf"/>
+                                                                <constraint firstItem="Xet-8r-D0F" firstAttribute="centerX" secondItem="alT-DL-y2H" secondAttribute="centerX" id="MKB-CT-D4G"/>
                                                                 <constraint firstAttribute="bottom" secondItem="alT-DL-y2H" secondAttribute="bottom" constant="8" id="R3a-Tc-U6E"/>
                                                                 <constraint firstItem="lht-0w-KJa" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="S5N-8L-Are"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lht-0w-KJa" secondAttribute="trailing" constant="20" symbolic="YES" id="T8e-Rh-ofe"/>
@@ -270,7 +288,7 @@
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ft-8t-LTU" secondAttribute="trailing" constant="20" symbolic="YES" id="bLE-8y-RfI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="alT-DL-y2H" secondAttribute="trailing" id="i63-Bu-j2p"/>
                                                                 <constraint firstItem="lht-0w-KJa" firstAttribute="top" secondItem="8ft-8t-LTU" secondAttribute="bottom" constant="4" id="lg3-9y-SZ8"/>
-                                                                <constraint firstAttribute="bottom" secondItem="tAa-9y-E0h" secondAttribute="bottom" constant="8" id="oZv-xI-umc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Xet-8r-D0F" secondAttribute="bottom" constant="20" id="uGD-07-ioh"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -292,6 +310,7 @@
                                                 <connections>
                                                     <outlet property="dateLabel" destination="lht-0w-KJa" id="dGE-ZR-Ejs"/>
                                                     <outlet property="galleryImageView" destination="alT-DL-y2H" id="5v9-mw-nNy"/>
+                                                    <outlet property="imageCountHolderView" destination="Xet-8r-D0F" id="zIv-ex-tMg"/>
                                                     <outlet property="imageCountLabel" destination="tAa-9y-E0h" id="evr-xj-tGn"/>
                                                     <outlet property="titleLabel" destination="8ft-8t-LTU" id="GtI-aH-GV7"/>
                                                 </connections>
@@ -352,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="-56"/>
+            <point key="canvasLocation" x="-23.188405797101453" y="-56.25"/>
         </scene>
     </scenes>
     <resources>

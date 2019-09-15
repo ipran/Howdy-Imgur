@@ -16,7 +16,7 @@ struct ImgurStoryboard {
 
 struct ImgurURLConstants {
     static let baseURL = "https://api.imgur.com"
-    static let gallerySearchPath = "/3/gallery/search/top/week/1"
+    static let gallerySearchPath = "/3/gallery/search/top/week"
     static let queryParamSerachKeyName = "q"
     
 }

@@ -20,6 +20,9 @@
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
+        <array key="Lato-Semibold.ttf">
+            <string>Lato-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Home View Controller-->
@@ -49,6 +52,9 @@
                                                                 <color key="value" red="0.56862745098039214" green="0.56862745098039214" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xFh-ic-VxI"/>
+                                                        </connections>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon" translatesAutoresizingMaskIntoConstraints="NO" id="43Y-j7-CPa">
                                                         <rect key="frame" x="8" y="11" width="14" height="14"/>
@@ -88,7 +94,7 @@
                                         <rect key="frame" x="0.0" y="68" width="414" height="72"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for the top images of the week from the imgur gallery." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pp1-BN-0P7">
-                                                <rect key="frame" x="46" y="0.0" width="322" height="34"/>
+                                                <rect key="frame" x="61" y="0.0" width="292.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                 <color key="textColor" red="0.56000000000000005" green="0.56000000000000005" blue="0.57999999999999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -96,10 +102,11 @@
                                         </subviews>
                                         <color key="backgroundColor" name="Imgur_BackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="leading" secondItem="iQQ-FT-qoL" secondAttribute="leading" constant="46" id="277-uC-2dt"/>
-                                            <constraint firstAttribute="trailing" secondItem="Pp1-BN-0P7" secondAttribute="trailing" constant="46" id="EyI-ZT-Ltm"/>
+                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iQQ-FT-qoL" secondAttribute="leading" constant="46" id="277-uC-2dt"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pp1-BN-0P7" secondAttribute="trailing" constant="46" id="EyI-ZT-Ltm"/>
                                             <constraint firstAttribute="height" constant="72" id="dBS-9v-Zos"/>
                                             <constraint firstItem="Pp1-BN-0P7" firstAttribute="top" secondItem="iQQ-FT-qoL" secondAttribute="top" id="jNi-Ev-B7Q"/>
+                                            <constraint firstItem="Pp1-BN-0P7" firstAttribute="centerX" secondItem="iQQ-FT-qoL" secondAttribute="centerX" id="xou-vj-b51"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WfJ-FL-ruu" userLabel="Segment Control View Container">
@@ -141,6 +148,7 @@
                                                             <constraint firstItem="qef-x1-uiV" firstAttribute="centerY" secondItem="0UQ-Bi-ys3" secondAttribute="centerY" id="0Ug-tY-Pai"/>
                                                             <constraint firstItem="qef-x1-uiV" firstAttribute="top" secondItem="ApE-0u-HlX" secondAttribute="top" constant="12" id="2MG-U7-LRR"/>
                                                             <constraint firstItem="Ob7-Sg-TCh" firstAttribute="top" secondItem="ApE-0u-HlX" secondAttribute="top" constant="12" id="7z5-Aj-Gce"/>
+                                                            <constraint firstItem="qef-x1-uiV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ob7-Sg-TCh" secondAttribute="trailing" constant="8" symbolic="YES" id="Lp9-qa-mC7"/>
                                                             <constraint firstAttribute="trailing" secondItem="qef-x1-uiV" secondAttribute="trailing" constant="25" id="ZO3-dz-wqm"/>
                                                             <constraint firstItem="Ob7-Sg-TCh" firstAttribute="leading" secondItem="ApE-0u-HlX" secondAttribute="leading" constant="29" id="e60-BH-2UW"/>
                                                             <constraint firstItem="0UQ-Bi-ys3" firstAttribute="leading" secondItem="ApE-0u-HlX" secondAttribute="leading" constant="0.10000000000000001" id="g3F-ds-UMg"/>
@@ -208,7 +216,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKO-kW-wZm" userLabel="Bottom View Container">
                                 <rect key="frame" x="0.0" y="212" width="414" height="684"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7jM-Xb-2tu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="684"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -216,11 +224,11 @@
                                                 <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uNh-hA-xEP" id="xc7-3K-RGN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="399.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-Ic-Cej" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
-                                                            <rect key="frame" x="8" y="8" width="398" height="383.5"/>
+                                                            <rect key="frame" x="8" y="8" width="398" height="384"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ft-8t-LTU">
                                                                     <rect key="frame" x="16" y="16" width="49" height="29"/>
@@ -234,11 +242,15 @@
                                                                     <color key="textColor" name="Imgur_GrayColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="IMG_0805" translatesAutoresizingMaskIntoConstraints="NO" id="alT-DL-y2H">
-                                                                    <rect key="frame" x="0.0" y="74" width="398" height="309.5"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="alT-DL-y2H">
+                                                                    <rect key="frame" x="0.0" y="74" width="398" height="302"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="398" id="QNO-7a-vjv"/>
+                                                                        <constraint firstAttribute="height" constant="302" id="gsw-Ph-XYo"/>
+                                                                    </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
-                                                                    <rect key="frame" x="173" y="358.5" width="52" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
+                                                                    <rect key="frame" x="199" y="376" width="0.0" height="0.0"/>
                                                                     <color key="backgroundColor" name="Imgur_BlueColor"/>
                                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,10 +262,12 @@
                                                                 <constraint firstItem="tAa-9y-E0h" firstAttribute="centerX" secondItem="Pct-Ic-Cej" secondAttribute="centerX" id="2t4-PN-TsE"/>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="top" secondItem="Pct-Ic-Cej" secondAttribute="top" constant="16" id="71c-g7-AT7"/>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="9AN-9x-gnf"/>
-                                                                <constraint firstAttribute="bottom" secondItem="alT-DL-y2H" secondAttribute="bottom" id="R3a-Tc-U6E"/>
+                                                                <constraint firstAttribute="bottom" secondItem="alT-DL-y2H" secondAttribute="bottom" constant="8" id="R3a-Tc-U6E"/>
                                                                 <constraint firstItem="lht-0w-KJa" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="S5N-8L-Are"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lht-0w-KJa" secondAttribute="trailing" constant="20" symbolic="YES" id="T8e-Rh-ofe"/>
+                                                                <constraint firstItem="alT-DL-y2H" firstAttribute="centerX" secondItem="Pct-Ic-Cej" secondAttribute="centerX" id="Vsc-hb-dqA"/>
                                                                 <constraint firstItem="alT-DL-y2H" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" id="X8N-Of-NI5"/>
-                                                                <constraint firstItem="alT-DL-y2H" firstAttribute="top" secondItem="lht-0w-KJa" secondAttribute="bottom" constant="8" id="asI-l1-s4h"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8ft-8t-LTU" secondAttribute="trailing" constant="20" symbolic="YES" id="bLE-8y-RfI"/>
                                                                 <constraint firstAttribute="trailing" secondItem="alT-DL-y2H" secondAttribute="trailing" id="i63-Bu-j2p"/>
                                                                 <constraint firstItem="lht-0w-KJa" firstAttribute="top" secondItem="8ft-8t-LTU" secondAttribute="bottom" constant="4" id="lg3-9y-SZ8"/>
                                                                 <constraint firstAttribute="bottom" secondItem="tAa-9y-E0h" secondAttribute="bottom" constant="8" id="oZv-xI-umc"/>
@@ -299,7 +313,7 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgS-BK-sq1">
                                 <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Semibold" family="Lato" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -329,6 +343,7 @@
                         <outlet property="activityIndicatorView" destination="OjA-qy-skk" id="uAj-Li-ZDZ"/>
                         <outlet property="appInfoLabel" destination="Pp1-BN-0P7" id="EEW-TG-iFW"/>
                         <outlet property="noResponseLabel" destination="XgS-BK-sq1" id="4ft-bG-PSX"/>
+                        <outlet property="searchField" destination="970-Ip-fi0" id="fAa-5j-eQu"/>
                         <outlet property="segmentControlContainer" destination="ApE-0u-HlX" id="Xi0-2D-RtX"/>
                         <outlet property="segmentControlViewHeightConstraint" destination="FsD-pr-bzO" id="wLl-b4-GBL"/>
                         <outlet property="tableView" destination="7jM-Xb-2tu" id="YEF-hJ-RS5"/>
@@ -337,11 +352,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="163.768115942029" y="20.758928571428569"/>
+            <point key="canvasLocation" x="-22" y="-56"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0805" width="2592" height="1728"/>
         <image name="search_icon" width="32" height="32"/>
         <namedColor name="Imgur_BackgroundColor">
             <color red="0.05000000074505806" green="0.079999998211860657" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

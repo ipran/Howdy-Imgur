@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		3D11FE2F232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE2D232B7A63003F2414 /* Howdy_Imgur.xcdatamodeld */; };
 		3D11FE31232B7A64003F2414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE30232B7A64003F2414 /* Assets.xcassets */; };
 		3D11FE34232B7A64003F2414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D11FE32232B7A64003F2414 /* LaunchScreen.storyboard */; };
-		3D11FE3F232B7A64003F2414 /* Howdy_ImgurTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */; };
+		3D11FE3F232B7A64003F2414 /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */; };
 		3D11FE4A232B7A64003F2414 /* Howdy_ImgurUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE49232B7A64003F2414 /* Howdy_ImgurUITests.swift */; };
 		3D11FE62232B9B9A003F2414 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE61232B9B9A003F2414 /* Endpoint.swift */; };
 		3D11FE64232B9C66003F2414 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FE63232B9C66003F2414 /* HTTPMethod.swift */; };
@@ -69,7 +69,7 @@
 		3D11FE33232B7A64003F2414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D11FE35232B7A64003F2414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D11FE3A232B7A64003F2414 /* Howdy ImgurTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Howdy ImgurTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Howdy_ImgurTests.swift; sourceTree = "<group>"; };
+		3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
 		3D11FE40232B7A64003F2414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D11FE45232B7A64003F2414 /* Howdy ImgurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Howdy ImgurUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D11FE49232B7A64003F2414 /* Howdy_ImgurUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Howdy_ImgurUITests.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		3D11FE3D232B7A64003F2414 /* Howdy ImgurTests */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE3E232B7A64003F2414 /* Howdy_ImgurTests.swift */,
+				3D11FEB1232E4B2A003F2414 /* HomeTests */,
 				3D11FE40232B7A64003F2414 /* Info.plist */,
 			);
 			path = "Howdy ImgurTests";
@@ -409,6 +409,14 @@
 				3D11FEA4232D02BB003F2414 /* GalleryImageTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3D11FEB1232E4B2A003F2414 /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D11FE3E232B7A64003F2414 /* HomeViewTests.swift */,
+			);
+			path = HomeTests;
 			sourceTree = "<group>";
 		};
 		EBA19BACAA50BA54DEE862B7 /* Frameworks */ = {
@@ -657,7 +665,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D11FE3F232B7A64003F2414 /* Howdy_ImgurTests.swift in Sources */,
+				3D11FE3F232B7A64003F2414 /* HomeViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@ class HomeViewRouter: HomeViewRouterProtocol {
     static func createHomeViewModule(homeViewRef: HomeViewController) {
         let presenter : HomeViewPresenterProtocol & HomeViewOutputInteractorProtocol = HomeViewPresenter()
         presenter.router = HomeViewRouter()
-        presenter.view = homeViewRef as? HomeViewProtocol
+        presenter.view = homeViewRef
         presenter.interactor = HomeViewInteractor(presenter: presenter)
         homeViewRef.presenter = presenter
         

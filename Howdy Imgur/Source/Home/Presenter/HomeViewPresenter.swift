@@ -17,10 +17,18 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
         
     }
     /**
-    This will get called when user searches for images with a key
-    */
+     This will get called when user searches for images with a key
+     */
     func fetchImageList(with searchKey: String) {
         interactor?.fetchImageList(searchKey: searchKey)
+        
+    }
+    /**
+     This will get called when user swtiches from All to Less
+     */
+    func sortGalleryListForLessResult(with gallery: Gallery) {
+        interactor?.sortGalleryListForLessResult(gallery: gallery)
+        
     }
     /**
      Fetch image list success call back

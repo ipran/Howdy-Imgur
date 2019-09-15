@@ -10,9 +10,10 @@ import Foundation
 
 // MARK: - Gallery
 struct Gallery : Codable {
-    let data : [Datum]?
-    let success : Bool?
-    let status : Int?
+    init() {}
+    var data : [Datum]?
+    var success : Bool?
+    var status : Int?
     
     enum CodingKeys: String, CodingKey {
         case data = "data"

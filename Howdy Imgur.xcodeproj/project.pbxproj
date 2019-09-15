@@ -296,7 +296,6 @@
 		3D11FE65232B9CA8003F2414 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3D11FE85232C18E7003F2414 /* Utils */,
 				3D11FE84232C18E0003F2414 /* View */,
 				3D11FE69232BA11F003F2414 /* Constants */,
 				3D11FE66232B9D42003F2414 /* Extension */,
@@ -360,13 +359,6 @@
 				3D11FE86232C1962003F2414 /* ShadowView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		3D11FE85232C18E7003F2414 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		3D11FE8A232C21D0003F2414 /* Font */ = {

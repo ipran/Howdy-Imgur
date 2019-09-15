@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Gallery
+// MARK: - ImgurGallery
 struct ImgurGallery : Codable {
     init() {}
     var data : [Gallery]?
@@ -30,7 +30,7 @@ struct ImgurGallery : Codable {
     }
     
 }
-// MARK: - Data
+// MARK: - Gallery
 struct Gallery : Codable {
     let id : String?
     let title : String?

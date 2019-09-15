@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProtocol {
+    // Delcarations
     var interactor: HomeViewInputInteractorProtocol?
     var view: HomeViewProtocol?
     var router: HomeViewRouterProtocol?

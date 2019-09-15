@@ -22,9 +22,11 @@ class GalleryImageTableViewCell: UITableViewCell {
         didSet {
             // Set title label
             titleLabel.text = data?.title
+            
             // Set date label
             let unixTimestamp = Double((data?.datetime)!)
             dateLabel.text = unixTimestamp.dateTimeStringValue()
+            
             // Set image count label
             let imageCount = data?.images?.count ?? Int(truncating: 0 as NSNumber)
             if imageCount > 1 {
@@ -35,6 +37,7 @@ class GalleryImageTableViewCell: UITableViewCell {
                 imageCountHolderView.isHidden = true
                 
             }
+            
             // Set image
             if let imageType = data?.images?[0].type {
                 if !(imageType == "video/mp4") {

@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
     func showImageList(with gallery: [Gallery]) {
-        segmentControlViewHeightConstraint.constant = 56
+        showSegmentControl()
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
         updateUIControls()
@@ -127,6 +127,7 @@ extension HomeViewController {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+        
     }
     func updateUIControls() {
         if let cellCount = gallery?.count {

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class HomeViewController: UIViewController {
     // MARK: - Outlets
@@ -69,47 +68,11 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GalleryImageTableViewCell.identifier) as! GalleryImageTableViewCell
-        
         guard let data = gallery?.data?[indexPath.row] else {
             return cell
         }
         cell.selectionStyle = .none
-        cell.titleLabel.text = data.title
-        let imageCount = data.images?.count ?? Int(truncating: 0 as NSNumber)
-        if imageCount > 1 {
-            cell.imageCountLabel.text = "\(imageCount - 1) more"
-            
-        }
-        let imageType = data.images?[0].type
-        if (imageType == "image/jpeg") || (imageType == "image/png") {
-            let imageURL = URL(string: (data.images?[0].link)!)
-//            cell.imageView?.kf.setImage(with: imageURL)
-            
-            
-            let processor = DownsamplingImageProcessor(size: (cell.imageView?.bounds.size)!)
-                >> RoundCornerImageProcessor(cornerRadius: 6)
-            cell.imageView!.kf.indicatorType = .activity
-            cell.imageView!.kf.setImage(
-                with: imageURL,
-                placeholder: UIImage(named: "placeholder"),
-                options: [
-                    .processor(processor),
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ])
-            {
-                result in
-                switch result {
-                case .success(let value):
-                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                case .failure(let error):
-                    print("Job failed: \(error.localizedDescription)")
-                }
-            }
-            
-            
-        }
+        cell.data = data
         return cell
         
     }

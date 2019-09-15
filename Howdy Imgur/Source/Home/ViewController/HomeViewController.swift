@@ -88,6 +88,9 @@ extension HomeViewController {
      Doing the initial setup for the controller
      */
     func initialSetup() {
+        // Setting accessibility id for UI Testing
+        tableView.accessibilityIdentifier = ImgurAccessibilityIdentifier.homeTableView
+        toggleSegmentControl.accessibilityIdentifier = ImgurAccessibilityIdentifier.toggleSwitch
         // Seup SearchField
         searchField.returnKeyType = .search
         // Setup Segment Control

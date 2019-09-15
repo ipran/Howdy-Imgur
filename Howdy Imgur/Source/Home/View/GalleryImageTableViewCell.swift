@@ -33,30 +33,10 @@ class GalleryImageTableViewCell: UITableViewCell {
             let imageType = data?.images?[0].type
             if (imageType == "image/jpeg") || (imageType == "image/png") {
                 let imageURL = URL(string: (data?.images?[0].link)!)
-                galleryImageView?.kf.setImage(with: imageURL)
+                galleryImageView?.loadImageFrom(imageURL!)
                 
-                //                let processor = DownsamplingImageProcessor(size: (galleryImageView?.bounds.size)!)
-                //                    >> RoundCornerImageProcessor(cornerRadius: 6)
-                //                galleryImageView.kf.indicatorType = .activity
-                //                galleryImageView.kf.setImage(
-                //                    with: imageURL,
-                //                    placeholder: UIImage(named: "placeholder"),
-                //                    options: [
-                //                        .processor(processor),
-                //                        .scaleFactor(UIScreen.main.scale),
-                //                        .transition(.fade(1)),
-                //                        .cacheOriginalImage
-                //                    ])
-                //                {
-                //                    result in
-                //                    switch result {
-                //                    case .success(let value):
-                //                        print("Task done for: \(value.source.url?.absoluteString ?? "")")
-                //                    case .failure(let error):
-                //                        print("Job failed: \(error.localizedDescription)")
-                //                    }
-                //
-                //                }
+            } else {
+                galleryImageView.image = #imageLiteral(resourceName: "no_image")
                 
             }
             

@@ -56,23 +56,6 @@ extension HomeViewController: HomeViewProtocol {
         self.activityIndicatorView.stopAnimating()
         
     }
-    func updateUIControls() {
-        if let cellCount = gallery?.data?.count {
-            if cellCount == 0 {
-                noResponseLabel.isHidden = false
-                noResponseLabel.text = "Sorry, we did not find any results for your search."
-                appInfoLabel.text = "Search for the top images of the week from the imgur gallery."
-                
-            }
-            else {
-                noResponseLabel.isHidden = true
-                appInfoLabel.text = "Switch to 'Less' for displaying results fewer in number."
-                
-            }
-            
-        }
-        
-    }
     
 }
 
@@ -112,16 +95,19 @@ extension HomeViewController {
         toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
         toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
         
-        // Don't show segment control initially
-        //        segmentControlViewHeightConstraint.constant = 0
     }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
             
         case 0:
+            presenter?.fetchImageList(with: searchField.text!)
             break
             
         case 1:
+            if gallery != nil {
+                presenter?.sortGalleryListForLessResult(with: gallery!)
+                
+            }
             break
             
         default:
@@ -138,6 +124,23 @@ extension HomeViewController {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
+    }
+    func updateUIControls() {
+        if let cellCount = gallery?.data?.count {
+            if cellCount == 0 {
+                noResponseLabel.isHidden = false
+                noResponseLabel.text = "Sorry, we did not find any results for your search."
+                appInfoLabel.text = "Search for the top images of the week from the imgur gallery."
+                
+            }
+            else {
+                noResponseLabel.isHidden = true
+                appInfoLabel.text = "Switch to 'Less' for displaying results fewer in number."
+                
+            }
+            
+        }
+        
     }
     
 }

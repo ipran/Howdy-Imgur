@@ -33,5 +33,18 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
         }
         
     }
+    /*
+    Sort Gallery for less results
+    **/
+    func sortGalleryListForLessResult(gallery: Gallery) {
+        // Filter array based on checking 'points','score' and 'topic_id' add up to an even no
+        let data = gallery.data?.filter { ($0.points! + $0.score! + $0.topic_id!) % 2 == 0 }
+        var filteredGallery = Gallery()
+        filteredGallery.status = 200
+        filteredGallery.success = true
+        filteredGallery.data = data
+        self.presenter?.imageListDidFetch(gallery: filteredGallery)
+        
+    }
     
 }

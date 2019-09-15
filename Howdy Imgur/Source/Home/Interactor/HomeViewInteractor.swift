@@ -26,7 +26,17 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
             case let .failure(error) :
                 self.presenter?.imageListDidFetchFailed(error: error)
             case let .success(gallery) :
-                self.presenter?.imageListDidFetch(gallery: gallery)
+                // Reverse chronological order
+                let dataArray = gallery.data
+                var reversedDataArray = [Datum]()
+                for item in (dataArray?.reversed())! {
+                    reversedDataArray.append(item)
+                }
+                var reversedGallery = Gallery()
+                reversedGallery.status = 200
+                reversedGallery.success = true
+                reversedGallery.data = reversedDataArray
+                self.presenter?.imageListDidFetch(gallery: reversedGallery)
                 
             }
             

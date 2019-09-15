@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var segmentControlViewHeightConstraint: NSLayoutConstraint!
     // Delclarations
     var presenter: HomeViewPresenterProtocol?
-    var gallery: ImgurGallery?
+    var gallery: [Gallery]?
     
     /**
      Instantiate a controller
@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
 
 // MARK: - Presenter Protocols
 extension HomeViewController: HomeViewProtocol {
-    func showImageList(with gallery: ImgurGallery) {
+    func showImageList(with gallery: [Gallery]) {
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
         updateUIControls()
@@ -62,12 +62,12 @@ extension HomeViewController: HomeViewProtocol {
 // MARK: - Tableview Delegate & Datasource
 extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gallery?.data?.count ?? 0
+        return gallery?.count ?? 0
         
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GalleryImageTableViewCell.identifier) as! GalleryImageTableViewCell
-        guard let data = gallery?.data?[indexPath.row] else {
+        guard let data = gallery?[indexPath.row] else {
             return cell
         }
         cell.selectionStyle = .none
@@ -129,7 +129,7 @@ extension HomeViewController {
         return image
     }
     func updateUIControls() {
-        if let cellCount = gallery?.data?.count {
+        if let cellCount = gallery?.count {
             if cellCount == 0 {
                 noResponseLabel.isHidden = false
                 noResponseLabel.text = "Sorry, we did not find any results for your search."

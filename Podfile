@@ -3,7 +3,6 @@
 
 target 'Howdy Imgur' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
   pod 'Kingfisher'
 
   # Pods for Howdy Imgur

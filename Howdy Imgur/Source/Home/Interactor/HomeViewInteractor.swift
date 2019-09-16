@@ -32,7 +32,12 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
                 for item in (dataArray?.reversed())! {
                     reversedDataArray.append(item)
                 }
-                self.presenter?.imageListDidFetch(gallery: reversedDataArray)
+                // Remove "video/mp4" format
+                let filteredResults = reversedDataArray.filter({ (data) -> Bool in
+                    return !(data.images?[0].type == "video/mp4")
+
+                })
+                self.presenter?.imageListDidFetch(gallery: filteredResults)
                 
             }
             

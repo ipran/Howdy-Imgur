@@ -39,8 +39,11 @@ class GalleryImageTableViewCell: UITableViewCell {
             }
             
             // Set image
-            let imageURL = URL(string: (data?.images?[0].link)!)
-            galleryImageView?.loadImageFrom(imageURL!)
+            if (data?.images?[0].type) != nil {
+                    let imageURL = URL(string: (data?.images?[0].link)!)
+                    galleryImageView?.loadImageFrom(imageURL!)
+                
+            }
             
         }
         

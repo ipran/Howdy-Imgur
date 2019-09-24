@@ -51,5 +51,18 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
         self.view?.showAPIError(message: (error as? APIError)?.localizedDescription ?? ImgurMessages.somethingWentWrong)
         
     }
+    /**
+     Sorted image list
+    */
+    func filteredImageListDidFetch(gallery: [Gallery]?) {
+        if let galleryArray = gallery {
+            self.view?.showFilteredImageList(with: galleryArray)
+            
+        } else {
+            self.view?.showAPIError(message: ImgurMessages.noImagesFound)
+            
+        }
+        
+    }
     
 }

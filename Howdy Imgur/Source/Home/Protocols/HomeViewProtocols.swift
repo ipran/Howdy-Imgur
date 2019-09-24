@@ -12,6 +12,7 @@ protocol HomeViewProtocol: class {
     // Presenter -> View
     func showImageList(with gallery: [Gallery])
     func showAPIError(message: String)
+    func showFilteredImageList(with gallery: [Gallery])
     
 }
 
@@ -38,6 +39,7 @@ protocol HomeViewOutputInteractorProtocol: class {
     // Interactor -> Presenter
     func imageListDidFetch(gallery: [Gallery]?)
     func imageListDidFetchFailed(error: Error?)
+    func filteredImageListDidFetch(gallery: [Gallery]?)
     
 }
 

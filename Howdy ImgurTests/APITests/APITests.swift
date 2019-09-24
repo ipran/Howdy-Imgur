@@ -32,6 +32,21 @@ class APITests: XCTestCase {
 }
 
 extension APITests: HomeViewOutputInteractorProtocol {
+    func filteredImageListDidFetch(gallery: [Gallery]?) {
+        // Testing whether image array is getting filtered
+        XCTAssert((gallery != nil), "Filtering data failed")
+        guard let gallery = gallery else {
+            return
+            
+        }
+        // For testing whether necessary fields there in the data array
+        for data in gallery {
+            XCTAssertFalse(data.title!.isEmpty, "Gallery with empty title")
+            
+        }
+        expectation?.fulfill()
+        
+    }
     func imageListDidFetch(gallery: [Gallery]?) {
         // Testing whether API is giving data
         XCTAssert((gallery != nil), "Home API failed")

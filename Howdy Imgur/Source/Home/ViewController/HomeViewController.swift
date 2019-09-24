@@ -59,6 +59,14 @@ extension HomeViewController: HomeViewProtocol {
         refreshTableView()
         
     }
+    func showFilteredImageList(with gallery: [Gallery]) {
+        self.gallery = gallery
+        self.activityIndicatorView.stopAnimating()
+        updateUIControls()
+        showSegmentControl()
+        refreshTableView()
+        
+    }
     
 }
 

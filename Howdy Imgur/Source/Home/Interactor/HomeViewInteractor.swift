@@ -35,7 +35,7 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
                 // Remove "video/mp4" format
                 let filteredResults = reversedDataArray.filter({ (data) -> Bool in
                     return !(data.images?[0].type == "video/mp4")
-
+                    
                 })
                 self.presenter?.imageListDidFetch(gallery: filteredResults)
                 
@@ -49,8 +49,8 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
      **/
     func sortGalleryListForLessResult(gallery: [Gallery]) {
         // Filter array based on checking whether 'points','score' and 'topic_id' add up to an even no
-        let filtereddataArray = gallery.filter { ($0.points! + $0.score! + $0.topic_id!) % 2 == 0 }
-        self.presenter?.imageListDidFetch(gallery: filtereddataArray)
+        let filteredDataArray = gallery.filter { ($0.points! + $0.score! + $0.topic_id!) % 2 == 0 }
+        self.presenter?.filteredImageListDidFetch(gallery: filteredDataArray)
         
     }
     

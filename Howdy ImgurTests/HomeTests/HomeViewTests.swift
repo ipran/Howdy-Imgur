@@ -69,6 +69,17 @@ class HomeViewTests: XCTestCase {
 }
 
 extension HomeViewTests: HomeViewProtocol {
+    func showFilteredImageList(with gallery: [Gallery]) {
+        // Testing whether Filtered array is giving data
+        XCTAssert(gallery.count > 0, "Empty list")
+        // For testing whether all necessary details getting from API
+        for data in gallery {
+            XCTAssertFalse(data.title!.isEmpty, "Gallery with empty title")
+            
+        }
+        expectation?.fulfill()
+        
+    }
     func showImageList(with gallery: [Gallery]) {
         // Testing whether API is giving data
         XCTAssert(gallery.count > 0, "Empty list")

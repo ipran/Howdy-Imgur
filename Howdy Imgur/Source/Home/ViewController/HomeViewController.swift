@@ -48,13 +48,15 @@ extension HomeViewController: HomeViewProtocol {
         self.gallery = gallery
         self.activityIndicatorView.stopAnimating()
         updateUIControls()
-        self.tableView.reloadData()
+        refreshTableView()
         
     }
     func showAPIError(message: String) {
+        self.gallery = nil
         self.noResponseLabel.isHidden = false
         self.noResponseLabel.text = message
         self.activityIndicatorView.stopAnimating()
+        refreshTableView()
         
     }
     
@@ -154,6 +156,13 @@ extension HomeViewController {
     }
     func hideSegmentControl() {
         segmentControlViewHeightConstraint.constant = 0
+    }
+    func refreshTableView() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            
+        }
+        
     }
     
 }

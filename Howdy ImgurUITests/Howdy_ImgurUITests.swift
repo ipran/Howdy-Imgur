@@ -33,4 +33,10 @@ class Howdy_ImgurUITests: XCTestCase {
         
     }
     
+    func testLoadingImagesInTableViewCell() {
+        let app = XCUIApplication()
+        XCTAssertNotNil(app.images["Cell Image"],"Cell image is not loading")
+        
+    }
+    
 }

@@ -31,7 +31,35 @@ class HomeViewTests: XCTestCase {
         homeViewController.presenter?.view = self
         homeViewController.presenter?.fetchImageList(with: "Test")
         wait(for: [expectation!], timeout: 20)
+        
     }
+    // MARK: - Home view Sort Gallery functionality test
+    func testHomeGalleryDataFilteringFunctionality() {
+        expectation = XCTestExpectation(description: "Test gallery is filtering based on checking whether 'points','score' and 'topic_id' add up to an even no.")
+        
+        var galleryArray = [Gallery]()
+        
+        var gallery1 = Gallery()
+        gallery1.title = "Gallery 1"
+        gallery1.points = 100
+        gallery1.score = 200
+        gallery1.topic_id = 100
+        
+        var gallery2 = Gallery()
+        gallery2.title = "Gallery 2"
+        gallery2.points = 200
+        gallery2.score = 300
+        gallery2.topic_id = 101
+        
+        galleryArray.append(gallery1)
+        galleryArray.append(gallery2)
+        
+        homeViewController.presenter?.view = self
+        homeViewController.presenter?.sortGalleryListForLessResult(with: galleryArray)
+        wait(for: [expectation!], timeout: 20)
+        
+    }
+    
     override func tearDown() {
         expectation?.fulfill()
         expectation = nil

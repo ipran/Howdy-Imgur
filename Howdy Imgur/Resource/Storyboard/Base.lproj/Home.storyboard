@@ -243,6 +243,9 @@
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="alT-DL-y2H">
                                                                     <rect key="frame" x="0.0" y="74" width="398" height="302"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="YES"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="398" id="QNO-7a-vjv"/>
                                                                         <constraint firstAttribute="height" constant="302" id="gsw-Ph-XYo"/>

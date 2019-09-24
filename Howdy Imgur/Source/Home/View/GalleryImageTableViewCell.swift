@@ -57,6 +57,8 @@ class GalleryImageTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Setup accessibilityIdentifier for cell image view for UI testing
+        galleryImageView.accessibilityIdentifier = ImgurAccessibilityIdentifier.tableViewCellIamge
         
     }
     

@@ -28,7 +28,7 @@ class GalleryImageTableViewCell: UITableViewCell {
             dateLabel.text = unixTimestamp.dateTimeStringValue()
             
             // Set image count label
-            let imageCount = data?.images?.count ?? Int(truncating: 0 as NSNumber)
+            let imageCount = data?.images?.count ?? 0
             if imageCount > 1 {
                 imageCountHolderView.isHidden = false
                 let displayImgCount = imageCount - 1

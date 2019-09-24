@@ -37,6 +37,9 @@ let logActivity = true
 struct ImgurMessages {
     static let noImagesFound = "No Images found for the given input!"
     static let somethingWentWrong = "Something went wrong!"
+    static let noResultForSearch = "Sorry, we did not find any results for your search."
+    static let appInfo = "Search for the top images of the week from the imgur gallery."
+    static let appInfoWhenToggleOn = "Switch to 'Less' for displaying results fewer in number."
 }
 
 // Accessibility Identifier for UITesting

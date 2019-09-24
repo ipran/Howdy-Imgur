@@ -41,6 +41,7 @@
 		3D11FEAD232DE1E4003F2414 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEAC232DE1E4003F2414 /* Double.swift */; };
 		3D11FEB4232E5116003F2414 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB3232E5116003F2414 /* APITests.swift */; };
 		3D11FEB8232E6A31003F2414 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D11FEB7232E6A31003F2414 /* UIImageView.swift */; };
+		3D821FFA233A8E6400256EBA /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D821FF9233A8E6400256EBA /* CommonTests.swift */; };
 		952149A0E901EBF1890328D1 /* libPods-Howdy ImgurTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95941CC58F2B8A8A3F42980A /* libPods-Howdy ImgurTests.a */; };
 		E8812F9183B7D492646EE521 /* libPods-Howdy Imgur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */; };
 /* End PBXBuildFile section */
@@ -102,6 +103,7 @@
 		3D11FEAC232DE1E4003F2414 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		3D11FEB3232E5116003F2414 /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		3D11FEB7232E6A31003F2414 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		3D821FF9233A8E6400256EBA /* CommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTests.swift; sourceTree = "<group>"; };
 		569CA651F600F4134D58A715 /* libPods-Howdy Imgur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Howdy Imgur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5931524E63D0CEABD4D6C0DE /* Pods-Howdy ImgurTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurTests.debug.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurTests/Pods-Howdy ImgurTests.debug.xcconfig"; sourceTree = "<group>"; };
 		65C8B85EB127B5DC2ECDEC00 /* Pods-Howdy ImgurUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Howdy ImgurUITests.release.xcconfig"; path = "Target Support Files/Pods-Howdy ImgurUITests/Pods-Howdy ImgurUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		3D11FE3D232B7A64003F2414 /* Howdy ImgurTests */ = {
 			isa = PBXGroup;
 			children = (
+				3D821FF8233A8E1300256EBA /* CommonTests */,
 				3D11FEB2232E50F5003F2414 /* APITests */,
 				3D11FEB1232E4B2A003F2414 /* HomeTests */,
 				3D11FE40232B7A64003F2414 /* Info.plist */,
@@ -423,6 +426,14 @@
 				3D11FEB3232E5116003F2414 /* APITests.swift */,
 			);
 			path = APITests;
+			sourceTree = "<group>";
+		};
+		3D821FF8233A8E1300256EBA /* CommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D821FF9233A8E6400256EBA /* CommonTests.swift */,
+			);
+			path = CommonTests;
 			sourceTree = "<group>";
 		};
 		EBA19BACAA50BA54DEE862B7 /* Frameworks */ = {
@@ -674,6 +685,7 @@
 			files = (
 				3D11FEB4232E5116003F2414 /* APITests.swift in Sources */,
 				3D11FE3F232B7A64003F2414 /* HomeViewTests.swift in Sources */,
+				3D821FFA233A8E6400256EBA /* CommonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -143,14 +143,14 @@ extension HomeViewController {
         if let cellCount = gallery?.count {
             if cellCount == 0 {
                 noResponseLabel.isHidden = false
-                noResponseLabel.text = "Sorry, we did not find any results for your search."
-                appInfoLabel.text = "Search for the top images of the week from the imgur gallery."
+                noResponseLabel.text = ImgurMessages.noResultForSearch
+                appInfoLabel.text = ImgurMessages.appInfo
                 hideSegmentControl()
                 
             }
             else {
                 noResponseLabel.isHidden = true
-                appInfoLabel.text = "Switch to 'Less' for displaying results fewer in number."
+                appInfoLabel.text = ImgurMessages.appInfoWhenToggleOn
                 showSegmentControl()
                 
             }

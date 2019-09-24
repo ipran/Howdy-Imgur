@@ -48,7 +48,7 @@ class HomeViewPresenter: HomeViewPresenterProtocol, HomeViewOutputInteractorProt
      Fetch image list failed call back
      */
     func imageListDidFetchFailed(error: Error?) {
-        self.view?.showAPIError(message: error?.localizedDescription ?? ImgurMessages.somethingWentWrong)
+        self.view?.showAPIError(message: (error as? APIError)?.localizedDescription ?? ImgurMessages.somethingWentWrong)
         
     }
     

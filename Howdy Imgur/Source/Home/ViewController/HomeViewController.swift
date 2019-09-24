@@ -165,6 +165,8 @@ extension HomeViewController: UITextFieldDelegate {
         toggleSegmentControl.selectedSegmentIndex = 0
         // Scroll tableview to top
         tableView.setContentOffset(.zero, animated: true)
+        // Hide no response lable once user click on the search button
+        self.noResponseLabel.isHidden = true
         // Handle control to presenter on text field return
         activityIndicatorView.startAnimating()
         presenter?.fetchImageList(with: textField.text!)

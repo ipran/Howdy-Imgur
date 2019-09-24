@@ -23,11 +23,11 @@ enum APIError: Error {
     
     var localizedDescription: String {
         switch self {
-        case .requestFailed: return "Request Failed"
-        case .invalidData: return "Invalid Data"
-        case .responseUnsuccessful: return "Response Unsuccessful"
-        case .jsonParsingFailure: return "JSON Parsing Failure"
-        case .jsonConversionFailure: return "JSON Conversion Failure"
+        case .requestFailed: return "Howdy_Imgur APIError : Cannot connect to Imgur Server"
+        case .invalidData: return "Howdy_Imgur APIError : Invalid Data"
+        case .responseUnsuccessful: return "Howdy_Imgur APIError : Response Unsuccessful"
+        case .jsonParsingFailure: return "Howdy_Imgur APIError : JSON Parsing Failure"
+        case .jsonConversionFailure: return "Howdy_Imgur APIError : JSON Conversion Failure"
             
         }
         

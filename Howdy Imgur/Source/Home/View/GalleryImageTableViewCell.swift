@@ -31,7 +31,14 @@ class GalleryImageTableViewCell: UITableViewCell {
             let imageCount = data?.images?.count ?? Int(truncating: 0 as NSNumber)
             if imageCount > 1 {
                 imageCountHolderView.isHidden = false
-                imageCountLabel.text = "\(imageCount - 1) more"
+                let displayImgCount = imageCount - 1
+                if displayImgCount == 1 {
+                    imageCountLabel.text = "\(displayImgCount) more image"
+                    
+                } else {
+                    imageCountLabel.text = "\(displayImgCount) more images"
+                    
+                }
                 
             } else {
                 imageCountHolderView.isHidden = true

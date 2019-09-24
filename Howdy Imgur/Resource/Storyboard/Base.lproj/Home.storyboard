@@ -249,10 +249,10 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-8r-D0F" customClass="ShadowView" customModule="Howdy_Imgur" customModuleProvider="target">
-                                                                    <rect key="frame" x="174" y="344" width="50" height="20"/>
+                                                                    <rect key="frame" x="151" y="344" width="96" height="20"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAa-9y-E0h">
-                                                                            <rect key="frame" x="25" y="1" width="0.0" height="0.0"/>
+                                                                            <rect key="frame" x="48" y="1" width="0.0" height="0.0"/>
                                                                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
@@ -260,7 +260,7 @@
                                                                     </subviews>
                                                                     <color key="backgroundColor" name="Imgur_BlueColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="50" id="Amf-y3-jto"/>
+                                                                        <constraint firstAttribute="width" constant="96" id="Amf-y3-jto"/>
                                                                         <constraint firstAttribute="height" constant="20" id="J0L-Jm-4My"/>
                                                                         <constraint firstItem="tAa-9y-E0h" firstAttribute="top" secondItem="Xet-8r-D0F" secondAttribute="top" constant="1" id="L7e-R4-vi3"/>
                                                                         <constraint firstItem="tAa-9y-E0h" firstAttribute="centerX" secondItem="Xet-8r-D0F" secondAttribute="centerX" id="Ynt-xS-PUb"/>

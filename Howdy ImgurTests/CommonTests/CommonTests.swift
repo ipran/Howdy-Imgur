@@ -38,9 +38,5 @@ class CommonTests: XCTestCase {
         assert(tableViewCellIdentifier == "GalleryImageTableViewCell", "Gallery image tableview cell identifier test failed")
         
     }
-    
-    func urlRequestCheck() {
-        URLRequest.set
-    }
 
 }

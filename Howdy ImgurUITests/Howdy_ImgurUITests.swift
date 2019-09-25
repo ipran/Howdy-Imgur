@@ -39,4 +39,10 @@ class Howdy_ImgurUITests: XCTestCase {
         
     }
     
+//    func testSegmentControl() {
+//        let app = XCUIApplication()
+//        let environment = app.segmentedControls.element(boundBy: 0)
+//        XCTAssertTrue(environment.buttons.element(boundBy: 0).isSelected, "Wrong enviornment selected")
+//    }
+    
 }

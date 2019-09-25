@@ -20,45 +20,50 @@ class GalleryImageTableViewCell: UITableViewCell {
     // Declarations
     var data: Gallery? {
         didSet {
-            // Set title label
-            titleLabel.text = data?.title
-            
-            // Set date label
-            let unixTimestamp = Double((data?.datetime)!)
-            dateLabel.text = unixTimestamp.dateTimeStringValue()
-            
-            // Set image count label
-            let imageCount = data?.images?.count ?? 0
-            if imageCount > 1 {
-                imageCountHolderView.isHidden = false
-                let displayImgCount = imageCount - 1
-                if displayImgCount == 1 {
-                    imageCountLabel.text = "\(displayImgCount) more image"
-                    
-                } else {
-                    imageCountLabel.text = "\(displayImgCount) more images"
-                    
-                }
-                
-            } else {
-                imageCountHolderView.isHidden = true
-                
-            }
-            
-            // Set image
-            if (data?.images?[0].type) != nil {
-                    let imageURL = URL(string: (data?.images?[0].link)!)
-                    galleryImageView?.loadImageFrom(imageURL!)
-                
-            }
+            configure(data)
             
         }
         
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Setup accessibilityIdentifier for cell image view for UI testing
+        // Setup accessibilityIdentifier for cells imageView for UI testing
         galleryImageView.accessibilityIdentifier = ImgurAccessibilityIdentifier.tableViewCellIamge
+        
+    }
+    func configure(_ data: Gallery?) {
+        titleLabel.text = data?.title
+        
+        let unixTimestamp = Double((data?.datetime)!)
+        dateLabel.text = unixTimestamp.dateTimeStringValue()
+        
+        let imageCount = data?.images?.count ?? 0
+        if imageCount > 1 {
+            setImageCountLabel(imageCount)
+            
+        } else {
+            imageCountHolderView.isHidden = true
+            
+        }
+        
+        // Set image
+        if (data?.images?[0].type) != nil {
+            let imageURL = URL(string: (data?.images?[0].link)!)
+            galleryImageView?.loadImageFrom(imageURL!)
+            
+        }
+        
+    }
+    func setImageCountLabel(_ imageCount: Int) {
+        imageCountHolderView.isHidden = false
+        let displayImgCount = imageCount - 1
+        if displayImgCount == 1 {
+            imageCountLabel.text = "\(displayImgCount) more image"
+            
+        } else {
+            imageCountLabel.text = "\(displayImgCount) more images"
+            
+        }
         
     }
     

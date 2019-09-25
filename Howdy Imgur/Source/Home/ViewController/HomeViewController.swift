@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     // MARK: - Outlets
     @IBOutlet weak var segmentControlContainer: ShadowView!
     @IBOutlet weak var toggleSegmentControl: UISegmentedControl!
@@ -87,108 +86,7 @@ extension HomeViewController: UITableViewDataSource,UITableViewDelegate {
         
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
-        
-    }
-    
-}
-
-// MARK: - Utility Functions
-extension HomeViewController {
-    /**
-     Doing the initial setup for the controller
-     */
-    func initialSetup() {
-        // Seup SearchField
-        searchField.returnKeyType = .search
-        // Setup Segment Control
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
-        toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
-        // Hide SegmentControl
-        hideSegmentControl()
-        
-    }
-    @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
-        switch segmentControl.selectedSegmentIndex {
-            
-        case 0:
-            presenter?.fetchImageList(with: searchField.text!)
-            break
-            
-        case 1:
-            if gallery != nil {
-                presenter?.sortGalleryListForLessResult(with: gallery!)
-                
-            }
-            break
-            
-        default:
-            break
-            
-        }
-        
-    }
-    func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        color.setFill()
-        UIRectFill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return image
-        
-    }
-    func updateUIControls() {
-        if let cellCount = gallery?.count {
-            if cellCount == 0 {
-                noResponseLabel.isHidden = false
-                noResponseLabel.text = ImgurMessages.noResultForSearch
-                appInfoLabel.text = ImgurMessages.appInfo
-                hideSegmentControl()
-                
-            }
-            else {
-                noResponseLabel.isHidden = true
-                appInfoLabel.text = ImgurMessages.appInfoWhenToggleOn
-                showSegmentControl()
-                
-            }
-            
-        }
-        
-    }
-    func showSegmentControl() {
-        segmentControlViewHeightConstraint.constant = 56
-        
-    }
-    func hideSegmentControl() {
-        segmentControlViewHeightConstraint.constant = 0
-    }
-    func refreshTableView() {
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-            
-        }
-        
-    }
-    
-}
-
-// MARK: - Textfield Delegate
-extension HomeViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Move segment control on All
-        toggleSegmentControl.selectedSegmentIndex = 0
-        // Scroll tableview to top
-        tableView.setContentOffset(.zero, animated: true)
-        // Hide no response lable once user click on the search button
-        self.noResponseLabel.isHidden = true
-        // Handle control to presenter on text field return
-        activityIndicatorView.startAnimating()
-        presenter?.fetchImageList(with: textField.text!)
-        textField.resignFirstResponder()
-        return true
+        return CGFloat(ImgurContants.homeTableViewCellHeight)
         
     }
     

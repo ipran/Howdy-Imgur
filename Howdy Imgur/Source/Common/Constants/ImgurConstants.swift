@@ -10,6 +10,8 @@ import Foundation
 
 struct ImgurContants {
     static let howdyImgur = "Howdy Imgur"
+    static let homeTableViewCellHeight = 400
+    
 }
 
 // Hold storyboard name constants

@@ -11,7 +11,7 @@ Howdy Imgur app contains a single view which searches for the top images of the 
 
 The app uses a single REST API (https://api.imgur.com/3/gallery/search/top/week?q=) , for fethcing data from the server.
 
-The Design pattern/Architecture used for Howdy Imgur app is 'VIPER' architecture. Unit tests for UI as well as APIs are written and the app is having a good code coverage.
+The Design pattern/Architecture used for Howdy Imgur app is 'VIPER' architecture. Unit tests for UI as well as APIs are written and the app is having a good code coverage of 70.8%.
 
 Howdy Imgur app is a universal iOS app which runs in iPhone as well as in iPad (and in portrait and landscpe mode). 
 
@@ -23,5 +23,5 @@ Installation
 1. Clone the repository, "https://github.com/ipran/Howdy-Imgur" , from a Mac OS
 2. Go inside the project folder, and open "Howdy Imgur.xcworkspace"
 3. It will open the Xcode with Howdy Imgur project
-4. If the Xcode display nothing or showing some error message, go to terminal and cd to project folder and type "pod install", this will install the third party libraries.
+4. If the Xcode display nothing or showing some error message, go to terminal and cd to project folder and type "pod install", this will install the third party libraries(Only one thrid party library is used for this app - Kingfisher).
 5. Open "Howdy Imgur.xcworkspace" again from the project folder and click run button. 

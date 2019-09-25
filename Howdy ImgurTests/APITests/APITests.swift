@@ -16,12 +16,35 @@ class APITests: XCTestCase {
     override func setUp() {
         
     }
-    // MARK: - Testing homedata API
+    // MARK: - Testing homedata API using interactor
     func testHomeDataAPI() {
-        self.expectation = XCTestExpectation(description: "Fetching home data..")
+        self.expectation = XCTestExpectation(description: "Fetching home data by calling Imgur API using interactor")
         let homeViewInteractor = HomeViewInteractor(presenter:self)
-        homeViewInteractor.fetchImageList(searchKey: "Test")
-        wait(for: [expectation!], timeout: 20)
+        homeViewInteractor.fetchImageList(searchKey: "happy")
+        wait(for: [expectation!], timeout: 30)
+        
+    }
+    // MARK: - Testing fetching data from Imgur server
+    func testFetchingImageListAPI() {
+        self.expectation = XCTestExpectation(description: "Fetch data from Imgur server")
+        let apiManager = ImgurAPIManager()
+        apiManager.fetchDataforInputText(queryParameter: "happy") { (response) in
+            
+            switch(response) {
+                
+            case let .failure(error) :
+                print(error.localizedDescription)
+                XCTFail()
+                
+            case let .success(result) :
+                XCTAssertNotNil(result.status, "Fetching data from server successfull")
+                
+            }
+            
+            self.expectation?.fulfill()
+            
+        }
+        wait(for: [self.expectation!], timeout: 30)
         
     }
     override func tearDown() {

@@ -31,15 +31,17 @@ struct HTTPHeaderField {
     
 }
 
-// Show/Hide log details
-let logActivity = true
-
 struct ImgurMessages {
     static let noImagesFound = "No Images found for the given input!"
     static let somethingWentWrong = "Something went wrong!"
     static let noResultForSearch = "Sorry, we did not find any results for your search."
     static let appInfo = "Search for the top images of the week from the imgur gallery."
     static let appInfoWhenToggleOn = "Switch to 'Less' for displaying results fewer in number."
+    static let requestFailed = "Sorry, couldn't communicate with Imgur server. Please check your network connection."
+    static let invalidData = "The operation couldn't be completed. Invalid response"
+    static let responseUnsuccessful = "Response Unsuccessful. There was an error connecting to the Imgur server"
+    static let jsonParsingFailure = "Something's gone wrong with your request"
+    
 }
 
 // Accessibility Identifier for UITesting
@@ -50,3 +52,6 @@ struct ImgurAccessibilityIdentifier {
     static let tableViewCellIamge = "Cell Image"
     
 }
+
+// Show/Hide log details
+let logActivity = true

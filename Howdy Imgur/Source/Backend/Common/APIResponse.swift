@@ -23,11 +23,11 @@ enum APIError: Error {
     
     var localizedDescription: String {
         switch self {
-        case .requestFailed: return "Cannot connect to Imgur Server"
-        case .invalidData: return "Invalid Data"
-        case .responseUnsuccessful: return "Response Unsuccessful"
-        case .jsonParsingFailure: return "JSON Parsing Failure"
-        case .jsonConversionFailure: return "JSON Conversion Failure"
+        case .requestFailed: return ImgurMessages.requestFailed
+        case .invalidData: return ImgurMessages.invalidData
+        case .responseUnsuccessful: return ImgurMessages.responseUnsuccessful
+        case .jsonParsingFailure: return ImgurMessages.jsonParsingFailure
+        case .jsonConversionFailure: return ImgurMessages.jsonParsingFailure
             
         }
         

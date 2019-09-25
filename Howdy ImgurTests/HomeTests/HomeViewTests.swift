@@ -29,8 +29,8 @@ class HomeViewTests: XCTestCase {
     func testHomeDataFetching() {
         expectation = XCTestExpectation(description: "Fetch home data")
         homeViewController.presenter?.view = self
-        homeViewController.presenter?.fetchImageList(with: "Test")
-        wait(for: [expectation!], timeout: 20)
+        homeViewController.presenter?.fetchImageList(with: "happy")
+        wait(for: [expectation!], timeout: 30)
         
     }
     // MARK: - Home view Sort Gallery functionality test

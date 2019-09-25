@@ -10,7 +10,6 @@ import Foundation
 
 // MARK: - ImgurGallery
 struct ImgurGallery : Codable {
-    init() {}
     var data : [Gallery]?
     var success : Bool?
     var status : Int?

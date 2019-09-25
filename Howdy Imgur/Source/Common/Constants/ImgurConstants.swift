@@ -11,6 +11,15 @@ import Foundation
 struct ImgurContants {
     static let howdyImgur = "Howdy Imgur"
     static let homeTableViewCellHeight = 400
+    static let cellImageCount = "more image"
+    static let cellImagesCount = "more images"
+    static let imageTypeVideo = "video/mp4"
+    static let segmentControlMaxHeight = 56
+    static let segmentControlMinHeight = 0
+    static let segmentIndexZero = 0
+    static let segmentIndexOne = 1
+    static let segmentControlImageWidth = 80
+    static let segmentControlImageHeight = 40
     
 }
 

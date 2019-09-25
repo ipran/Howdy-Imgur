@@ -14,7 +14,7 @@ import Foundation
 extension HomeViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Move segment control on All
-        toggleSegmentControl.selectedSegmentIndex = 0
+        toggleSegmentControl.selectedSegmentIndex = ImgurContants.segmentIndexZero
         // Scroll tableview to top
         tableView.setContentOffset(.zero, animated: true)
         // Hide no response lable once user click on the search button
@@ -37,8 +37,8 @@ extension HomeViewController {
         // Seup SearchField
         searchField.returnKeyType = .search
         // Setup Segment Control
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: 80, height: 40)), forSegmentAt: 0)
-        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: 80, height: 40)), forSegmentAt: 1)
+        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 0.9700000286, green: 0.7099999785, blue: 0.1800000072, alpha: 1), size: CGSize(width: ImgurContants.segmentControlImageWidth, height: ImgurContants.segmentControlImageHeight)), forSegmentAt: ImgurContants.segmentIndexZero)
+        toggleSegmentControl.setImage(getImageWithColor(color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) , size: CGSize(width: ImgurContants.segmentControlImageWidth, height: ImgurContants.segmentControlImageHeight)), forSegmentAt: ImgurContants.segmentIndexOne)
         toggleSegmentControl.addTarget(self, action: #selector(didTapSegmentControl), for: .valueChanged)
         hideSegmentControl()
         
@@ -63,11 +63,11 @@ extension HomeViewController {
         
     }
     func showSegmentControl() {
-        segmentControlViewHeightConstraint.constant = 56
+        segmentControlViewHeightConstraint.constant = CGFloat(ImgurContants.segmentControlMaxHeight)
         
     }
     func hideSegmentControl() {
-        segmentControlViewHeightConstraint.constant = 0
+        segmentControlViewHeightConstraint.constant = CGFloat(ImgurContants.segmentControlMinHeight)
     }
     @objc func didTapSegmentControl(segmentControl: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {

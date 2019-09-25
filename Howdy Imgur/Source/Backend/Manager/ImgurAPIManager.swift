@@ -21,8 +21,8 @@ class ImgurAPIManager: BaseAPIManager {
         
     }
     /**
-    Fetch home data based on input text
-    */
+     Fetch home data based on input text
+     */
     func fetchDataforInputText(queryParameter: String, completion: @escaping(APIResponse<ImgurGallery,APIError>) -> Void) {
         let endpoint = ImgurFeed.gallerySearch(queryParam: queryParameter)
         var request = endpoint.request

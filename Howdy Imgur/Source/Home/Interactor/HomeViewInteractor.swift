@@ -34,7 +34,7 @@ class HomeViewInteractor: HomeViewInputInteractorProtocol {
                 }
                 // Remove "video/mp4" format
                 let filteredResults = reversedDataArray.filter({ (data) -> Bool in
-                    return !(data.images?[0].type == "video/mp4")
+                    return !(data.images?[0].type == ImgurContants.imageTypeVideo)
                     
                 })
                 self.presenter?.imageListDidFetch(gallery: filteredResults)

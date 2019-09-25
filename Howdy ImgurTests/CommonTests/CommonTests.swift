@@ -32,5 +32,15 @@ class CommonTests: XCTestCase {
         assert(stringValue == "25-09-2019 12:36 AM", "Time stamp conversion failed")
         
     }
+    
+    func testHomeTableViewCellIdentifier() {
+        let tableViewCellIdentifier = GalleryImageTableViewCell.identifier
+        assert(tableViewCellIdentifier == "GalleryImageTableViewCell", "Gallery image tableview cell identifier test failed")
+        
+    }
+    
+    func urlRequestCheck() {
+        URLRequest.set
+    }
 
 }

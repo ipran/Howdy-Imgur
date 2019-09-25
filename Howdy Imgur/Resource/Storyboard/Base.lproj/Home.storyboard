@@ -166,7 +166,7 @@
                                                                 <real key="value" value="0.5"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                <color key="value" name="iRiderGray"/>
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </userDefinedRuntimeAttribute>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowColorOpacity">
                                                                 <real key="value" value="0.5"/>
@@ -262,6 +262,9 @@
                                                                         </label>
                                                                     </subviews>
                                                                     <color key="backgroundColor" name="Imgur_BlueColor"/>
+                                                                    <accessibility key="accessibilityConfiguration">
+                                                                        <bool key="isElement" value="YES"/>
+                                                                    </accessibility>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="96" id="Amf-y3-jto"/>
                                                                         <constraint firstAttribute="height" constant="20" id="J0L-Jm-4My"/>
@@ -279,6 +282,9 @@
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" name="Imgur_BackgroundColor"/>
+                                                            <accessibility key="accessibilityConfiguration">
+                                                                <bool key="isElement" value="YES"/>
+                                                            </accessibility>
                                                             <constraints>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="top" secondItem="Pct-Ic-Cej" secondAttribute="top" constant="16" id="71c-g7-AT7"/>
                                                                 <constraint firstItem="8ft-8t-LTU" firstAttribute="leading" secondItem="Pct-Ic-Cej" secondAttribute="leading" constant="16" id="9AN-9x-gnf"/>
@@ -310,6 +316,9 @@
                                                         <constraint firstItem="Pct-Ic-Cej" firstAttribute="leading" secondItem="xc7-3K-RGN" secondAttribute="leading" constant="8" id="ych-PS-IYF"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="lht-0w-KJa" id="dGE-ZR-Ejs"/>
                                                     <outlet property="galleryImageView" destination="alT-DL-y2H" id="5v9-mw-nNy"/>
@@ -390,9 +399,6 @@
         </namedColor>
         <namedColor name="Imgur_YellowColor">
             <color red="0.97000002861022949" green="0.70999997854232788" blue="0.18000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="iRiderGray">
-            <color red="0.76999998092651367" green="0.76999998092651367" blue="0.76999998092651367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="iRiderGray_ParaText">
             <color red="0.41999998688697815" green="0.41999998688697815" blue="0.41999998688697815" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -61,6 +61,7 @@ struct ImgurAccessibilityIdentifier {
     static let toggleSwitch = "ToggleSwitch"
     static let segmnetAllLabel = "All"
     static let tableViewCellIamge = "Cell Image"
+    static let tableViewCell = "GalleryImageTableViewCell"
     
 }
 

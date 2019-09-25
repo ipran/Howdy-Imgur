@@ -22,29 +22,5 @@ extension UIView {
         }
         
     }
-    // Border Width
-    @IBInspectable var borderWidth: CGFloat {
-        get {
-            return layer.borderWidth
-            
-        }
-        set {
-            layer.borderWidth = newValue
-            
-        }
-        
-    }
-    // Border Color
-    @IBInspectable var borderColor: UIColor {
-        get {
-            return UIColor(cgColor: layer.borderColor ?? UIColor.white.cgColor)
-            
-        }
-        set {
-            layer.borderColor = newValue.cgColor
-            
-        }
-        
-    }
     
 }

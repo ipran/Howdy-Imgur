@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class ShadowView: UIView {
-    //MARK:- Connection Outlet
+    //MARK: - Outlets
     @IBInspectable var isShadowEnabled: Bool = false
     @IBInspectable var shadowWidth: CGFloat = -1
     @IBInspectable var shadowHeight: CGFloat = 2
@@ -18,8 +18,7 @@ class ShadowView: UIView {
     @IBInspectable var shadowColorOpacity: Float = 0.5
     @IBInspectable var shadowRadius: CGFloat = 4
     @IBInspectable var shouldRasterize: Bool = false
-    @IBInspectable var isRoundCorner: Bool = false
-    //MARK:- Life Cycle
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -27,18 +26,7 @@ class ShadowView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        updateCornerRadius()
         addShadow()
-        
-    }
-    //MARK:- Arrange View
-    fileprivate func updateCornerRadius() {
-        if isRoundCorner {
-            let estimatedRadius = bounds.height / 2
-            layer.cornerRadius = estimatedRadius
-            layer.masksToBounds = isRoundCorner
-            
-        }
         
     }
     fileprivate func addShadow() {
@@ -51,13 +39,6 @@ class ShadowView: UIView {
             layer.shouldRasterize = shouldRasterize
             
         }
-        
-    }
-    func setRoundCorner(for side: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: side, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
         
     }
     
